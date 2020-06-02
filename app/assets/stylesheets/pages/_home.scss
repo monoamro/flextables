@@ -1,21 +1,18 @@
 // Specific CSS for your home-page
   body {
-    background: none;
     font-family: 'Montserra';
-    color: white;
+    height: 100%;
    }
    
-   body.mylandingpage {
+   .bg-landingpage {
     height: 100vh;
-    background-image: url("school.jpg");
-    /* flex-box thing */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    background-size: cover; 
-    margin-bottom: 30px;
-   }
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: asset_url("school.jpg");
+  }
+
+  // text
   
   a {
     text-decoration: none;
@@ -43,15 +40,15 @@
     text-align: center;
   }
   
-  // Buttons
-  .btn-banner {
+// Buttons
+  .btn-bg {
     display: inline-block;
-    background-color: #649d66;
+    background-color: #03256C;
     padding: 16px 36px;
     border-radius: 3px;
     color: white;
     &:hover {
-      color: white;
+      color: #03256C;
       background-color: #D6DAD8;
     }
   }
@@ -59,16 +56,28 @@
   .btn-login {
     display: inline-block;
     padding: 16px 36px;
-    border-radius: 5px;
+    border-radius: 3px;
     color: white;
     background-color: #03256C;
     &:hover {
-      color: white;
-      background-color: #39375B;
+      color: #03256C;
+      background-color: #D6DAD8;
     }
   }
 
-  // Cards
-  .card-login {
+// Container
 
+.container {
+  h2 {
+    padding: 32px 24px;
+  }
+  width: 900px;
+  margin: auto;
+}
+
+#container {
+  position: absolute;
+    top: 30px;
+    right: 15px;
+  text-align: center;
   }
