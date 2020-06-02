@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_02_130356) do
+ActiveRecord::Schema.define(version: 2020_06_02_162815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_06_02_130356) do
     t.string "title"
     t.string "room"
     t.integer "capacity"
-    t.string "type"
+    t.string "lesson_type"
     t.bigint "teacher_id", null: false
     t.bigint "grade_id", null: false
     t.string "weekly_periods", default: [], array: true
