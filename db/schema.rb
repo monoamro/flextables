@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_02_162815) do
+ActiveRecord::Schema.define(version: 2020_06_03_121843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 2020_06_02_162815) do
     t.string "weekly_periods", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "details"
+    t.text "homework"
     t.index ["grade_id"], name: "index_lessons_on_grade_id"
     t.index ["teacher_id"], name: "index_lessons_on_teacher_id"
   end
