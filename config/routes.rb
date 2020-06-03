@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   get "timeslots", to: "timeslots#index"
+  get "lessons/:id", to: "lessons#show", as: :lesson
+  get "lessons", to: "lessons#index"
 
   devise_scope :user do
     authenticated :user do
