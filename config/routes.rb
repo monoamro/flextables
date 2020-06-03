@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   root to: "time_slots#index"
   devise_for :users
 
-
   # as a student I can see my lesson
   # as a teacher I can see my class
   # as a teacher I can update classes
