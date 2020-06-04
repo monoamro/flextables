@@ -1,11 +1,14 @@
 <h1>Here goes the time table</h1>
-<div class="container-x">
+<div class="table">
   <% @spots.each do |spot| %>
     <% time_slot = @time_slots.find{ |ts| ts.weekly_period == spot.to_s } %>
     <% if time_slot.nil? %>
-      <div class="weekly_spot"></div> <h1>Link to</h1>
+      <div class="weekly_spot"><p> <%= link_to 'add class', "time_slots/new/#{spot}" %> </p></div>
     <% else %>
       <%= render 'shared/time_slot', title: time_slot.lesson.title %>
+      <% if time_slot.lesson.lesson_type == "Flex" %>
+        <%= link_to "delete", time_slot_path(time_slot), method: "delete" %>
+      <% end %>
     <% end %>
   <% end %>
 </div>

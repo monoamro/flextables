@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   # as a teacher I can update classes
   resources :lessons, only: [:show, :edit, :update, :index]
   # as a student I can choose my flextable
-  resources :time_slots, only: [:index, :new, :create]
+  resources :time_slots, only: [:index, :create, :destroy]
+  get "time_slots/new/:weekly_period", to: "time_slots#new"
   # as a teacher I can see my timeable
 
 end
