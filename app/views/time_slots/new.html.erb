@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <!-- <div class="col-xs-12 col-sm-col-sm-offset-3"> -->
+      <%= simple_form_for [@time_slot] do |f| %>
+         <%= f.select :lesson, ['Math', 'English', 'German'] %>
+         <%= f.submit "Add a flex lesson", class: "btn submits sign-up" %>
+      <% end %>
+    <!-- </div> -->
+  </div>
+</div>
