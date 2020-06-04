@@ -2,19 +2,33 @@
     margin-top: 64px;
     text-align: center;
     padding: 60px;
-    background-color: #2c2b2b;
+    background-color: rgba(227, 253, 245, 0.5);
   }
   
   .footer a {
-    font-size: 30px;
-    color: #49F09D;
+    color: #3e403f;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 8px;
   }
   
   .footer p {
-    color: #49F09D;
+    color: #3e403f;
+    font-family: 'Abel', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .footer h2 {
+    font-size: 250%;
+    font-family: 'Playfair Display', serif;
+    color: #3e403f;
   }
   
   .footer .fas {
-    color: #BF0F12;
+    color: #3e403f;
   }
   
