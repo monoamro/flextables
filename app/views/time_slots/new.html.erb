@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row">
+    <%= simple_form_for [@time_slot] do |f| %>
+      <%= f.select :lesson, Lesson.select { |lesson| lesson.weekly_periods.include? (params[:weekly_period]) }.map(&:title) %>
+      <%= f.hidden_field :weekly_period, value: params[:weekly_period] %>
+      <%= f.submit "Add a flex lesson", class: "btn submits sign-up" %>
+    <% end %>
+  </div>
+</div>
