@@ -1,52 +1,11 @@
 <h1>Here goes the time table</h1>
-
-<div class="container student-schedule" data-controller="slots">
-  <div class="row">
-    <div class="col-2 hour"></div>
-    <div class="col-2 headers">Monday</div>
-    <div class="col-2 headers mobile-header">Mon</div>
-    <div class="col-2 headers">Tuesday</div>
-    <div class="col-2 headers mobile-header">Tue</div>
-    <div class="col-2 headers">Wednesday</div>
-    <div class="col-2 headers mobile-header">Wed</div>
-    <div class="col-2 headers">Thursday</div>
-    <div class="col-2 headers mobile-header">Thu</div>
-    <div class="col-2 headers">Friday</div>
-    <div class="col-2 headers mobile-header">Fr</div>
-  </div>
-  <div class="row">
-    <div class="col-2 hour">8:00</div>
-    <div class="col-2 period" data-target="slots.period"></div>
-    <div class="col-2 period" data-target="slots.period"></div>
-    <div class="col-2 period" data-target="slots.period"></div>
-    <div class="col-2 period" data-target="slots.period"></div>
-    <div class="col-2 period" data-target="slots.period"></div>
-  </div>
-  <div class="row">
-    <div class="col-2 hour">10:00</div>
-    <div class="col-2 period" data-target="slots.period"></div>
-    <div class="col-2 period" data-target="slots.period"></div>
-    <div class="col-2 period" data-target="slots.period"></div>
-    <div class="col-2 period" data-target="slots.period"></div>
-    <div class="col-2 period" data-target="slots.period"></div>
-  </div>
-  <div class="row">
-    <div class="col-2 hour">12:00</div>
-    <div class="col-2 period" data-target="slots.period"></div>
-    <div class="col-2 period" data-target="slots.period"></div>
-    <div class="col-2 period" data-target="slots.period"></div>
-    <div class="col-2 period" data-target="slots.period"></div>
-    <div class="col-2 period" data-target="slots.period"></div>
-  </div>
-  <div class="row">
-    <div class="col-12 lunch">LUNCH</div>
-  </div>
-  <div class="row">
-    <div class="col-2 hour">15:00</div>
-    <div class="col-2 period" data-target="slots.period"></div>
-    <div class="col-2 period" data-target="slots.period"></div>
-    <div class="col-2 period" data-target="slots.period"></div>
-    <div class="col-2 period" data-target="slots.period"></div>
-    <div class="col-2 period" data-target="slots.period"></div>
-  </div>
+<div class="container-x">
+  <% @spots.each do |spot| %>
+    <% time_slot = @time_slots.find{ |ts| ts.weekly_period == spot.to_s } %>
+    <% if time_slot.nil? %>
+      <div class="weekly_spot"></div> <h1>Link to</h1>
+    <% else %>
+      <%= render 'shared/time_slot', title: time_slot.lesson.title %>
+    <% end %>
+  <% end %>
 </div>
