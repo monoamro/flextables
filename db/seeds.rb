@@ -31,32 +31,39 @@ puts "#{grade.name} was created"
 
 puts "Creating users"
 # student user
-student_user = User.create(email: "student1@flextables.de", password: 123456, first_name: "John", last_name: "Whiley")
+student_user1 = User.create(email: "student1@flextables.de", password: 123456, first_name: "John", last_name: "Whiley")
+student_user2 = User.create(email: "student2@flextables.de", password: 123456, first_name: "Erica", last_name: "Hammad")
 
 #Mandetory teachers users
 math_teacher_user = User.create(email: "mathteacher@flextables.de", password: 123456, first_name: "Malben", last_name: "Franco")
-history_teacher_user = User.create(email: "historyteacher@flextables.de", password: 123456, first_name: "Jeremy", last_name: "Crane")
+history_teacher_user = User.create(email: "historyteacher@flextables.de", password: 123456, first_name: "Claudia", last_name: "Crane")
 german_teacher_user = User.create(email: "germanteacher@flextables.de", password: 123456, first_name: "Wilhelm", last_name: "Gries")
-ethics_teacher_user = User.create(email: "ethicsteacher@flextables.de", password: 123456, first_name: "Paul", last_name: "Klen")
+ethics_teacher_user = User.create(email: "ethicsteacher@flextables.de", password: 123456, first_name: "Nancy", last_name: "Klen")
 english_teacher_user = User.create(email: "englishteacher@flextables.de", password: 123456, first_name: "Jousef", last_name: "Rahbani")
 
 #Flex teachers users
-sports_teacher_user = User.create(email: "sportsteacher@flextables.de", password: 123456, first_name: "Xin", last_name: "Wunhan")
+sports_teacher_user = User.create(email: "sportsteacher@flextables.de", password: 123456, first_name: "Sally", last_name: "Wunhan")
 painting_teacher_user = User.create(email: "paintingteacher@flextables.de", password: 123456, first_name: "Alejandro", last_name: "Sanchez")
-it_teacher_user = User.create(email: "itteacher@flextables.de", password: 123456, first_name: "Barack", last_name: "Simpson")
+it_teacher_user = User.create(email: "itteacher@flextables.de", password: 123456, first_name: "Pia", last_name: "Simpson")
 biology_teacher_user = User.create(email: "biologyteacher@flextables.de", password: 123456, first_name: "Stefan", last_name: "Zelt")
-apcalc_teacher_user = User.create(email: "apcalcteacher@flextables.de", password: 123456, first_name: "Mayar", last_name: "Malik")
+apcalc_teacher_user = User.create(email: "apcalcteacher@flextables.de", password: 123456, first_name: "Marie", last_name: "Malik")
 
 #creating students
 
 puts "Creating students"
 
-student = Student.new
-student.user = student_user
-student.grade = grade
-student.save!
+student1 = Student.new
+student1.user = student_user1
+student1.grade = grade
+student1.save!
 
-puts "#{student.user.first_name} was made a student"
+student2 = Student.new
+student2.user = student_user2
+student2.grade = grade
+student2.save!
+
+puts "#{student1.user.first_name} was made a student"
+puts "#{student2.user.first_name} was made a student"
 
 #creating teachers
 
@@ -176,7 +183,20 @@ puts "All Flex lessons created"
 ("1".."20").each do |weekly_period|
   lessons = Lesson.all
   time_slot = TimeSlot.new
-  time_slot.student = student
+  time_slot.student = student1
+  time_slot.weekly_period = weekly_period
+  lessons.each do |lesson|
+    if lesson.weekly_periods.include?(weekly_period) && lesson.lesson_type == "Mandetory"
+      time_slot.lesson = lesson
+    end
+  time_slot.save
+  end
+end
+
+("1".."20").each do |weekly_period|
+  lessons = Lesson.all
+  time_slot = TimeSlot.new
+  time_slot.student = student2
   time_slot.weekly_period = weekly_period
   lessons.each do |lesson|
     if lesson.weekly_periods.include?(weekly_period) && lesson.lesson_type == "Mandetory"

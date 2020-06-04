@@ -1,59 +1,28 @@
-<header>
+<div class="bg-landingpage">
+  <h1>FlexTables</h1>
   <div class="container">
-    <div class="row">
-      <div class="col-sm-3">
-        <img src="logo.png">
-      </div>
-
-      <div class="col-sm-6 justify-content-center">
-        <h1>Welcome to FlexClasses</h1>
-        <p>The easy way to plan your Flex Classes</p>
-      </div>
-    </div>
+    <h1>Willkommen bei FlexTables</h1>
+    <h2>Unterricht planen leicht gemacht</p>
   </div>
-</header>
+</div>
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm-6 d-flex align-items-center">
-      <div class="textarea .con">
-        <p>Just a short information text about the amazing FlexTables</p>
-      </div>
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: false,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" } %>
+      <%= f.input :password,
+                  required: false,
+                  input_html: { autocomplete: "current-password" } %>
+      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
 
-    <div class="col-sm-6">
-      <div class="overlay">
-        <form>
-          <div class="con">
-
-            <header class="head-form">
-              <h2>Let's start</h2>
-            </header>
-            <br>
-
-            <div class="field-set">
-              <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                <div class="form-inputs">
-                  <%= f.input :email,
-                              required: false,
-                              autofocus: true,
-                              input_html: { autocomplete: "email" } %>
-                  <%= f.input :password,
-                              required: false,
-                              input_html: { autocomplete: "current-password" } %>
-                  <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-                </div>
-                <div class="form-actions">
-                <button class="log-in"><%= f.button :submit, "Log in" %></button>
-                </div>
-              <% end %>
-
-              <%= render "devise/shared/links" %>
-
-            </div>
-          </div>
-        </form>
-      </div>
+    <div class="form-actions">
+      <%= f.button :submit, "Log in" %>
     </div>
-  </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
 </div>

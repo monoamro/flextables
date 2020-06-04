@@ -11,6 +11,7 @@ class User < ApplicationRecord
   end
 
   def student?
+    # raise
     teachers.empty?
   end
 end
