@@ -3,10 +3,9 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     if resource.teacher?
-      redirect_to lessons_path
+      lessons_path
     elsif resource.student?
-      raise
-      redirect_to time_slots_path
+      time_slots_path
     end
   end
 end

@@ -18,7 +18,7 @@
     <div class="col-sm-6 d-flex align-items-center">
       <div class="textarea .con">
         <h4>What is FlexTables?</h4>
-        <p>FlexTables is optimist for schools with "Lernbüro" System.</p> 
+        <p>FlexTables is optimist for schools with "Lernbüro" System.</p>
         <br>
         <h4>For Teachers:</h4>
         <p>Keep track of your student's flex classes, digitalise content and homework and keep track of attendance.</p>
@@ -30,8 +30,8 @@
 
     <div class="col-sm-6">
       <div class="overlay">
-        <form>
-          <div class="con">
+        <div class="ft-forms">
+          <div class="con textarea p-5">
 
             <header class="head-form">
               <h2>Let's start</h2>
@@ -49,17 +49,16 @@
                               required: false,
                               input_html: { autocomplete: "current-password" } %>
                   <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-                </div>
+
+                 </div>
                 <div class="form-actions">
-                <button class="log-in"><%= f.button :submit, "Log in" %></button>
-                </div>
+                <%= f.submit "Log in" %>
               <% end %>
-
-              <%= render "devise/shared/links" %>
-
             </div>
+
+            <%= render "devise/shared/links" %>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>

@@ -1,13 +1,8 @@
 class LessonsController < ApplicationController
   skip_before_action :authenticate_user!
-  def show
-    # @lesson = Lesson.find(params[:id])
-
-  end
 
   def index
-    @lesson = Lesson.first
-    raise
+    @lessons = Lesson.all.select { |lesson| lesson.teacher == current_user.teachers.first }
   end
 
 end

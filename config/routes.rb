@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :lessons, only: [:show, :edit, :update, :index]
 
   # as a student I can choose my flextable
-  resources :time_slots, only: [:new, :create, :edit, :update]
+  resources :time_slots, only: [:index, :new, :create]
   # as a teacher I can see my timeable
 
   # devise_scope :user do
