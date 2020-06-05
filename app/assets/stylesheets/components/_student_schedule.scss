@@ -54,9 +54,7 @@ table {
 
 /* style css */
 /* --------------------------------
-
 Primary style
-
 -------------------------------- */
 *, *::after, *::before {
   box-sizing: border-box;
@@ -79,9 +77,7 @@ a {
 }
 
 /* --------------------------------
-
 Main Components
-
 -------------------------------- */
 .cd-schedule {
   position: relative;
@@ -240,7 +236,7 @@ Main Components
     width: 100%;
   }
   .cd-schedule .events .events-group {
-    width: 14%;
+    width: 20%;
     float: left;
     border: 1px solid #EAEAEA;
     /* reset style */
@@ -385,6 +381,15 @@ Main Components
 }
 
 .cd-schedule .single-event[data-event="event-4"]:hover {
+  background: #f7bd7f;
+}
+
+.cd-schedule .single-event[data-event="event-5"],
+.cd-schedule [data-event="event-5"] .header-bg {
+  background: #f6b067;
+}
+
+.cd-schedule .single-event[data-event="event-5"]:hover {
   background: #f7bd7f;
 }
 
@@ -546,7 +551,7 @@ Main Components
   .cd-schedule .event-modal .header {
     position: absolute;
     display: block;
-    top: 0;
+    top: -16px;
     left: 0;
     height: 100%;
   }
