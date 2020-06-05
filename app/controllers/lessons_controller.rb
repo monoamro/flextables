@@ -5,4 +5,8 @@ class LessonsController < ApplicationController
     @lessons = Lesson.all.select { |lesson| lesson.teacher == current_user.teachers.first }
   end
 
+  def show
+    @lesson = Lesson.find(params[:id])
+  end
+
 end
