@@ -389,9 +389,27 @@ Main Components
   background: #f6b067;
 }
 
-.cd-schedule .single-event[data-event="event-5"]:hover {
-  background: #f7bd7f;
+
+.cd-schedule .single-event[data-event="event-6"],
+.cd-schedule [data-event="event-6"] .header-bg {
+  background: #BA324F;
 }
+
+.cd-schedule .single-event[data-event="event-7"],
+.cd-schedule [data-event="event-7"] .header-bg {
+  background: #CCE6F4;
+}
+
+.cd-schedule .single-event[data-event="event-8"],
+.cd-schedule [data-event="event-8"] .header-bg {
+  background: #D62839;
+}
+
+.cd-schedule .single-event[data-event="event-9"],
+.cd-schedule [data-event="event-9"] .header-bg {
+  background: #CDD6D0;
+}
+
 
 .cd-schedule .event-modal {
   position: fixed;
