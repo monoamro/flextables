@@ -119,7 +119,10 @@ const schedule = () => {
     //update event content
     this.modalBody.find('.event-info').load(event.parent().attr('data-content')+'.html .event-info > *', function(data){
       //once the event content has been loaded
+      const showPartial = jQuery.parseHTML(data)[14]
+      self.element[0].children[2].children[1].children[0].appendChild(showPartial)
       self.element.addClass('content-loaded');
+      self.innerHTML = showPartial;
     });
 
     this.element.addClass('modal-is-open');
@@ -380,6 +383,7 @@ const schedule = () => {
     });
   }
 });
-};
 
-export default schedule()
+}
+
+export default schedule
