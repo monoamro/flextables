@@ -6,7 +6,7 @@
         <p> <%= link_to 'add class' , "time_slots/new/#{spot}" %> </p>
       </li>
     <% else %>
-      <li class="single-event" data-start="<%= time_slot.start_time %>:00" data-end="<%= time_slot.start_time %>:45" data-content="/" data-event="event-<%= time_slot.lesson.id  %>">
+      <li class="single-event" data-start="<%= time_slot.start_time %>:00" data-end="<%= time_slot.start_time %>:45" data-content="/lessons/<%= time_slot.lesson.id %>" data-event="event-<%= time_slot.lesson.id  %>">
         <a href="#0">
           <em class="event-name"><%= time_slot.lesson.title %></em>
         </a>
