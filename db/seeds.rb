@@ -116,7 +116,8 @@ puts "Creating lessons"
 #creating mandetory classes
 
 
-math = Lesson.new(title: "Math", room: "H2", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["1", "14", "10"], details: "Awsome Class", homework: "Tons of work guys")
+math = Lesson.new(title: "Math", room: "H2", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["1", "14", "10"], details: "Pythagorean theorem:"<br>"In a right angled triangle:"<br>"the square of the hypotenuse is equal to
+the sum of the squares of the other two sides.", homework: "Math Workbook 9, Page 23,Exercise 2, 3, 4 and 5")
 
 math.grade = grade
 math.teacher = math_teacher
@@ -124,14 +125,14 @@ math.save
 
 
 
-history = Lesson.new(title: "History", room: "H1", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["11", "3"], details: "Awsome Class", homework: "Tons of work guys")
+history = Lesson.new(title: "History", room: "H1", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["11", "3"], details: "Napoleon the III "<br>"(Charles-Louis Napoléon Bonaparte; 20 April 1808 – 9 January 1873)", homework: "Please read History alive, Page 112-115")
 
 history.grade = grade
 history.teacher = history_teacher
 history.save
 
 
-german = Lesson.new(title: "German", room: "M7", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["2", "13", "9"], details: "Awsome Class", homework: "Tons of work guys")
+german = Lesson.new(title: "German", room: "M7", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["2", "13", "9"], details: "Adjektivdeklination Typ2 Typ3, Adjektivgruppen", homework: "Deutsch als Fremdsprache 3, Seite 47, Aufgabe 1-3")
 
 
 german.grade = grade
@@ -140,7 +141,7 @@ german.save
 
 
 
-ethics = Lesson.new(title: "Ethics", room: "M7", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["7", "20"], details: "Awsome Class", homework: "Tons of work guys")
+ethics = Lesson.new(title: "Ethics", room: "M7", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["7", "20"], details: "Anarchy and Freedom in changing times", homework: "Read and fill out task sheet of this lesson")
 
 
 ethics.grade = grade
@@ -148,7 +149,7 @@ ethics.teacher = ethics_teacher
 ethics.save
 
 
-english = Lesson.new(title: "English", room: "M13", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["17", "9"], details: "Awsome Class", homework: "Tons of work guys")
+english = Lesson.new(title: "English", room: "M13", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["17", "9"], details: "Irregular Past Simple", homework: "Irregular Past Simple, Part 2, Execsise 1, 2 and 3")
 
 
 english.grade = grade
@@ -160,14 +161,14 @@ puts "All Mandetory lessons created"
 
 
 
-sports = Lesson.new(title: "Sports", room: "G1", capacity: 12, lesson_type: "Flex", weekly_periods: ["6", "12", "18", "4", "15"], details: "Awsome Class", homework: "Tons of work guys")
+sports = Lesson.new(title: "Sports", room: "G1", capacity: 12, lesson_type: "Flex", weekly_periods: ["6", "12", "18", "4", "15"], details: "Soccer, Volleyball", homework: "PE_Theoretics: Muscles of the Back")
 
 sports.grade = grade
 sports.teacher = sports_teacher
 sports.save
 
 
-painting = Lesson.new(title: "Painting", room: "A1", capacity: 10, lesson_type: "Flex", weekly_periods: ["6", "16", "8", "4", "19"], details: "Awsome Class", homework: "Tons of work guys")
+painting = Lesson.new(title: "Painting", room: "A1", capacity: 10, lesson_type: "Flex", weekly_periods: ["6", "16", "8", "4", "19"], details: "Impressionism", homework: "Paint the view from your window at home in an impressionistic style")
 
 
 painting.grade = grade
@@ -176,7 +177,7 @@ painting.save
 
 
 
-it = Lesson.new(title: "IT", room: "C1", capacity: 13, lesson_type: "Flex", weekly_periods: ["16", "12", "18", "19", "15"], details: "Awsome Class", homework: "Tons of work guys")
+it = Lesson.new(title: "IT", room: "C1", capacity: 13, lesson_type: "Flex", weekly_periods: ["16", "12", "18", "19", "15"], details: "Introduction to Layers in a Network and Routing", homework: "IT-today, Page 33 and 34")
 
 
 it.grade = grade
@@ -185,7 +186,7 @@ it.save
 
 
 
-biology = Lesson.new(title: "Biology", room: "M7", capacity: 10, lesson_type: "Flex", weekly_periods: ["6", "12", "8", "4", "15"], details: "Awsome Class", homework: "Tons of work guys")
+biology = Lesson.new(title: "Biology", room: "M7", capacity: 10, lesson_type: "Flex", weekly_periods: ["6", "12", "8", "4", "15"], details: "Frog´s anatomy", homework: "Read pages 168 to 171, then excersises 1 and 2 on page 171")
 
 
 biology.grade = grade
@@ -194,7 +195,7 @@ biology.save
 
 
 
-apcalc = Lesson.new(title: "AP-Calc.", room: "M13", capacity: 10, lesson_type: "Flex", weekly_periods: ["16", "8", "18", "19"], details: "Awsome Class", homework: "Tons of work guys")
+apcalc = Lesson.new(title: "AP-Calc.", room: "M13", capacity: 10, lesson_type: "Flex", weekly_periods: ["16", "8", "18", "19"], details: "Calculus of variations", homework: "Excersises 35-37 in the book")
 
 apcalc.grade = grade
 apcalc.teacher = apcalc_teacher
