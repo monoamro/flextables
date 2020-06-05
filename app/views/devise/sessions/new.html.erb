@@ -16,7 +16,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6 d-flex align-items-center">
-      <div class="textarea con">
+      <div class="textarea p-4">
         <h4>What is FlexTables?</h4>
         <p>FlexTables is optimist for schools with "Lernbüro" System.</p>
         <br>
@@ -51,16 +51,32 @@
                   <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
                 </div>
 
-                <div class="form-actions">
-                <%= f.submit "Log in", { class: "btn log-in" } %>
+                <div class="form-actions text-center">
+                  <%= f.submit "Log in", class: "btn log-in" %>
                 </div>
               <% end %>
             </div>
-
-            <%= render "devise/shared/links" %>
+            <div class="d-flex justify-content-center">
+              <%= render "devise/shared/links" %>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="links">
+    <a href="#"><i class="fab fa-fw fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-fw fa-github"></i></a>
+    <a href="#"><i class="fab fa-fw fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-fw fa-instagram"></i></a>
+  </div>
+  <div class="links m-3">
+    <a href="#">Impressum</a>
+    <a href="#">Privacy</a>
+    <a href="#">AGB</a>
+    <a href="#">About us</a>
   </div>
 </div>

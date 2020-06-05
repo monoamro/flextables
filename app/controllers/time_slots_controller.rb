@@ -2,7 +2,17 @@ class TimeSlotsController < ApplicationController
 
   def index
     @time_slots = current_user.students.first.time_slots
-    @spots = (1..20).to_a
+    if current_user.teacher?
+      # instance variables for teacher
+      # here would go something like @student = Student.find(params[:student_id])
+    else
+      @time_slots = current_user.students.first.time_slots
+      @monday_spots    = %w(1 6 11 16)
+      @tuesday_spots   = %w(2 7 12 17)
+      @wednesday_spots = %w(3 8 13 18)
+      @thursday_spots  = %w(4 9 14 19)
+      @friday_spots    = %w(5 10 15 20)
+    end
   end
 
   def new
@@ -34,3 +44,4 @@ class TimeSlotsController < ApplicationController
     params.require(:time_slot).permit(:lesson, :weekly_period)
   end
 end
+
