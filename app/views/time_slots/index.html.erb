@@ -5,7 +5,7 @@
     <% if time_slot.nil? %>
       <div class="weekly_spot"><p> <%= link_to 'add class', "time_slots/new/#{spot}" %> </p></div>
     <% else %>
-      <%= render 'shared/time_slot', title: time_slot.lesson.title %>
+      <%= render 'shared/time_slot', lesson: time_slot.lesson %>
       <% if time_slot.lesson.lesson_type == "Flex" %>
         <%= link_to "delete", time_slot_path(time_slot), method: "delete" %>
       <% end %>
