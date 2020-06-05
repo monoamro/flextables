@@ -72,8 +72,10 @@ const schedule = () => {
 
       //detect click on the event and open the modal
       $(this).on('click', 'a', function(event){
-        event.preventDefault();
-        if( !self.animating ) self.openModal($(this));
+        if (event.currentTarget.innerText !== 'add class') {
+          event.preventDefault();
+          if( !self.animating ) self.openModal($(this));
+        }
       });
     });
 
@@ -117,13 +119,10 @@ const schedule = () => {
     this.modal.attr('data-event', event.parent().attr('data-event'));
 
     //update event content
-    this.modalBody.find('.event-info').load(event.parent().attr('data-content')+'.html .event-info > *', function(data){
-      //once the event content has been loaded
-      const showPartial = jQuery.parseHTML(data)[14]
-      self.element[0].children[2].children[1].children[0].appendChild(showPartial)
-      self.element.addClass('content-loaded');
-      self.innerHTML = showPartial;
-    });
+    // this.modalBody.find('.event-info').load(event.parent().attr('data-content')+'.html .event-info > *', function(data){
+    //   //once the event content has been loaded
+    //   self.element.addClass('content-loaded');
+    // });
 
     this.element.addClass('modal-is-open');
 
@@ -214,6 +213,7 @@ const schedule = () => {
         event.removeClass('selected-event');
       });
     } else {
+      console.log(event)
       var eventTop = event.offset().top - $(window).scrollTop(),
         eventLeft = event.offset().left,
         eventHeight = event.innerHeight(),
