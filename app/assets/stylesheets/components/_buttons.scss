@@ -21,7 +21,17 @@
     margin: 7% auto;
     letter-spacing: 0.05em;
 }
+ // add lesson button
+ .submits-new {
+    width: auto;
+    display: inline-block;
+    float: center;
+    // margin-left: 2%;
 
+  .submits-new:hover {
+    border: solid;
+  }
+ }
 .submits {
     width: 48%;
     display: inline-block;
