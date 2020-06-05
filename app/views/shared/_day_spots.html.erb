@@ -1,0 +1,13 @@
+<ul>
+  <% spots.each do |spot| %>
+    <% time_slot = @time_slots.find{ |ts| ts.weekly_period == spot } %>
+    <% if time_slot.nil? %>
+    <% else %>
+      <li class="single-event" data-start="<%= time_slot.start_time %>:00" data-end="<%= time_slot.start_time %>:45" data-content="event-<%= time_slot.lesson.title %>" data-event="event-<%= time_slot.lesson.id  %>">
+        <a href="#0">
+          <em class="event-name"><%= time_slot.lesson.title %></em>
+        </a>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
