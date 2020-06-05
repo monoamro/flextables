@@ -1,8 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: rgba(227, 253, 245, 0.5);
-  border: 1px solid #ced4da;
-  border-radius: 2px;
+  background-color: rgba(255,	230, 250, 0.5);
+  // border: 1px solid #ced4da;
+  // border-radius: 2px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   height: 70px;
 }
@@ -32,4 +32,20 @@
   font-weight: 400;
   line-height: 1.5;
   margin: 8px;
+}
+
+.avatar {
+  width: 50px;
+  margin: 8px;
+}
+
+.dropdown-menu {
+  background-color: rgba(255,	230, 250, 0.5);
+  color: #3e403f;
+}
+
+.dropdown-item {
+  width: auto;
+  background-color: rgba(255,	230, 250, 0.5);
+  color: #3e403f;
 }

@@ -115,10 +115,13 @@ puts "Creating lessons"
 
 #creating mandetory classes
 
+
 math = Lesson.new(title: "Math", room: "H2", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["1", "14", "10"], details: "Awsome Class", homework: "Tons of work guys")
+
 math.grade = grade
 math.teacher = math_teacher
 math.save
+
 
 
 history = Lesson.new(title: "History", room: "H1", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["11", "3"], details: "Awsome Class", homework: "Tons of work guys")
@@ -127,14 +130,18 @@ history.grade = grade
 history.teacher = history_teacher
 history.save
 
+
 german = Lesson.new(title: "German", room: "M7", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["2", "13", "9"], details: "Awsome Class", homework: "Tons of work guys")
+
 
 german.grade = grade
 german.teacher = german_teacher
 german.save
 
 
+
 ethics = Lesson.new(title: "Ethics", room: "M7", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["7", "20"], details: "Awsome Class", homework: "Tons of work guys")
+
 
 ethics.grade = grade
 ethics.teacher = ethics_teacher
@@ -143,12 +150,14 @@ ethics.save
 
 english = Lesson.new(title: "English", room: "M13", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["17", "9"], details: "Awsome Class", homework: "Tons of work guys")
 
+
 english.grade = grade
 english.teacher = english_teacher
 english.save
 puts "All Mandetory lessons created"
 
 #creating flex classes
+
 
 
 sports = Lesson.new(title: "Sports", room: "G1", capacity: 12, lesson_type: "Flex", weekly_periods: ["6", "12", "18", "4", "15"], details: "Awsome Class", homework: "Tons of work guys")
@@ -160,26 +169,33 @@ sports.save
 
 painting = Lesson.new(title: "Painting", room: "A1", capacity: 10, lesson_type: "Flex", weekly_periods: ["6", "16", "8", "4", "19"], details: "Awsome Class", homework: "Tons of work guys")
 
+
 painting.grade = grade
 painting.teacher = painting_teacher
 painting.save
 
 
-it = Lesson.new(title: "IT", room: "C1", capacity: 13, lesson_type: "Flex", weekly_periods: ["16", "12", "18", "19", "15"])
+
+it = Lesson.new(title: "IT", room: "C1", capacity: 13, lesson_type: "Flex", weekly_periods: ["16", "12", "18", "19", "15"], details: "Awsome Class", homework: "Tons of work guys")
+
 
 it.grade = grade
 it.teacher = it_teacher
 it.save
 
 
+
 biology = Lesson.new(title: "Biology", room: "M7", capacity: 10, lesson_type: "Flex", weekly_periods: ["6", "12", "8", "4", "15"], details: "Awsome Class", homework: "Tons of work guys")
+
 
 biology.grade = grade
 biology.teacher = biology_teacher
 biology.save
 
 
+
 apcalc = Lesson.new(title: "AP-Calc.", room: "M13", capacity: 10, lesson_type: "Flex", weekly_periods: ["16", "8", "18", "19"], details: "Awsome Class", homework: "Tons of work guys")
+
 apcalc.grade = grade
 apcalc.teacher = apcalc_teacher
 apcalc.save
