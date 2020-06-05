@@ -116,7 +116,7 @@ puts "Creating lessons"
 #creating mandetory classes
 
 
-math = Lesson.new(title: "Math", room: "H2", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["1", "14", "10"], details: "Pythagorean theorem:"<br>"In a right angled triangle:"<br>"the square of the hypotenuse is equal to
+math = Lesson.new(title: "Math", room: "H2", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["1", "14", "10"], details: "Pythagorean theorem, In a right angled triangle, the square of the hypotenuse is equal to
 the sum of the squares of the other two sides.", homework: "Math Workbook 9, Page 23,Exercise 2, 3, 4 and 5")
 
 math.grade = grade
@@ -125,7 +125,7 @@ math.save
 
 
 
-history = Lesson.new(title: "History", room: "H1", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["11", "3"], details: "Napoleon the III "<br>"(Charles-Louis Napoléon Bonaparte; 20 April 1808 – 9 January 1873)", homework: "Please read History alive, Page 112-115")
+history = Lesson.new(title: "History", room: "H1", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["11", "3"], details: "Napoleon the III (Charles-Louis Napoléon Bonaparte; 20 April 1808 – 9 January 1873)", homework: "Please read History alive, Page 112-115")
 
 history.grade = grade
 history.teacher = history_teacher
