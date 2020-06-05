@@ -1,40 +1,48 @@
-////  Specific CSS for your home-page
-  @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
-  /* End Fonts */
-  /* Start Global rules */
-  * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-  }
 
-  p {
-    font-size: 18px;
-    font-family: 'Abel', sans-serif;
-  }
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
 
-  h4 {
-    font-size: 20px;
-    font-family: 'Playfair Display', serif;
-  }
-  /* End Global rules */
+.mainbody {
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
 
-  body {
-    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
-    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+  font-size: 2rem;
+  font-family: 'Vibur', cursive;
+  font-family: 'Abel', sans-serif;
+  opacity: .95;
+}
 
-    font-family: 'Vibur', cursive;
-  /*   the main font */
-    font-family: 'Abel', sans-serif;
-    opacity: .95;
-  /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); */
-  }
+.mainbody * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+  
+.mainbody p {
+  font-size: 18px;
+  font-family: 'Abel', sans-serif;
+}
+
+.mainbody h4 {
+  font-size: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.mainbody h1 {
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+}
+
+.mainbody h2 {
+  font-size: 18px;
+  font-family: 'Abel', sans-serif;
+}
 
   /* //////////////////////////////////////////// */
 
-  .textarea {
+.mainbody .textarea {
     width: 450px;
     min-height: 250px;
     height: auto;
@@ -63,7 +71,7 @@
     }
   }
 
-  .ts-form {
+  .mainbody .ts-form {
       width: 450px;
       min-height: 500px;
       height: auto;
@@ -75,7 +83,7 @@
       background-color: rgba(227, 253, 245, 0.3);
   }
   /* form Container */
-  form .con {
+  .mainbody form .con {
       display: -webkit-flex;
       display: flex;
 
@@ -89,20 +97,20 @@
   }
 
   /* the header form form */
-  header {
+  .mainbody header {
       margin: 2% auto 0% auto;
       text-align: center;
   }
   /* Login title form form */
-  header h2 {
+  .mainbody header h2 {
       font-size: 250%;
       font-family: 'Playfair Display', serif;
       color: #3e403f;
   }
   /*  A welcome message or an explanation of the login form */
-  header p {letter-spacing: 0.05em;}
+  .mainbody header p {letter-spacing: 0.05em;}
 
-  .logo {
+  .mainbody .logo {
       width: 40%;
       opacity: 0.95;
   }
