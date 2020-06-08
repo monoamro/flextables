@@ -3,8 +3,43 @@
     <% time_slot = @time_slots.find{ |ts| ts.weekly_period == spot } %>
     <% if time_slot.nil? %>
     <li class="single-event empty" data-start="<% if (1..5).include?(spot.to_i)%>9<% elsif (6..10).include?(spot.to_i) %>10<% elsif (11..15).include?(spot.to_i) %>11<% elsif (16..20).include?(spot.to_i) %>13<% end %>:00" data-end="<% if (1..5).include?(spot.to_i)%>9<% elsif (6..10).include?(spot.to_i) %>10<% elsif (11..15).include?(spot.to_i) %>11<% elsif (16..20).include?(spot.to_i) %>13<% end %>:45">
-        <p> <%= link_to 'add class' , "time_slots/new/#{spot}" %> </p>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%= spot %>">
+          Launch demo modal
+        </button>
       </li>
+      <div class="modal fade" id="exampleModal<%= spot %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="field-set">
+                <% lessons = Lesson.select { |lesson| lesson.weekly_periods.include?(spot) }.map(&:title) %>
+                <%= simple_form_for [@time_slot] do |f| %>
+                  <div class="form-inputs text-center">
+                    <%= f.label :Lesson %> <br>
+                    <%= f.select :lesson, lessons %> <br>
+                    <%= f.hidden_field :weekly_period, value: spot %>
+                  </div>
+                    <div>
+                      <div class="form-actions text-center">
+                        <%= f.submit "Add a flex lesson", class: "btn submits-new sign-up mt-5" %>
+                      </div>
+                    </div>
+                <% end %>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <% else %>
       <li class="single-event" data-start="<%= time_slot.start_time %>:00" data-end="<%= time_slot.start_time %>:45" data-content="/lessons/<%= time_slot.lesson.id %>" data-event="event-<%= time_slot.lesson.id  %>">
         <a href="#0">
