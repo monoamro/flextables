@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 #Creating grades
 puts "Deleting all time_slots"
 TimeSlot.delete_all
@@ -68,16 +67,10 @@ student_users = [student_user, student_user_2, student_user_3, student_user_4, s
 #Mandetory teachers users
 math_teacher_user = User.create(email: "mathteacher@flextables.de", password: 123456, first_name: "Malben", last_name: "Franco")
 history_teacher_user = User.create(email: "historyteacher@flextables.de", password: 123456, first_name: "Jeremy", last_name: "Crane")
-german_teacher_user = User.create(email: "germanteacher@flextables.de", password: 123456, first_name: "Wilhelm", last_name: "Gries")
-ethics_teacher_user = User.create(email: "ethicsteacher@flextables.de", password: 123456, first_name: "Paul", last_name: "Klen")
 english_teacher_user = User.create(email: "englishteacher@flextables.de", password: 123456, first_name: "Jousef", last_name: "Rahbani")
 
 #Flex teachers users
-sports_teacher_user = User.create(email: "sportsteacher@flextables.de", password: 123456, first_name: "Xin", last_name: "Wunhan")
-painting_teacher_user = User.create(email: "paintingteacher@flextables.de", password: 123456, first_name: "Alejandro", last_name: "Sanchez")
-it_teacher_user = User.create(email: "itteacher@flextables.de", password: 123456, first_name: "Barack", last_name: "Simpson")
 biology_teacher_user = User.create(email: "biologyteacher@flextables.de", password: 123456, first_name: "Stefan", last_name: "Zelt")
-apcalc_teacher_user = User.create(email: "apcalcteacher@flextables.de", password: 123456, first_name: "Mayar", last_name: "Malik")
 
 #creating students
 
@@ -88,9 +81,10 @@ students = student_users.map do |user|
   student.user = user
   student.grade = grade
   student.save!
+  student
 end
 
-puts "#{student.user.first_name} was made a student"
+puts "#{students.first.user.first_name} was made a student"
 
 #creating teachers
 
@@ -106,39 +100,14 @@ history_teacher = Teacher.new
 history_teacher.user = history_teacher_user
 history_teacher.save
 
-german_teacher = Teacher.new
-german_teacher.user = german_teacher_user
-german_teacher.save
-
-ethics_teacher = Teacher.new
-ethics_teacher.user = ethics_teacher_user
-ethics_teacher.save
-
 english_teacher = Teacher.new
 english_teacher.user = english_teacher_user
 english_teacher.save
 
 #creating flex teacher
-
-sports_teacher = Teacher.new
-sports_teacher.user = sports_teacher_user
-sports_teacher.save
-
-painting_teacher = Teacher.new
-painting_teacher.user = painting_teacher_user
-painting_teacher.save
-
-it_teacher = Teacher.new
-it_teacher.user = it_teacher_user
-it_teacher.save
-
 biology_teacher = Teacher.new
 biology_teacher.user = biology_teacher_user
 biology_teacher.save
-
-apcalc_teacher = Teacher.new
-apcalc_teacher.user = apcalc_teacher_user
-apcalc_teacher.save
 
 puts "Teachers were assigned"
 
@@ -170,7 +139,7 @@ german = Lesson.new(title: "German", room: "M7", capacity: 20, lesson_type: "Man
 
 
 german.grade = grade
-german.teacher = german_teacher
+german.teacher = history_teacher
 german.save
 
 
@@ -179,7 +148,7 @@ ethics = Lesson.new(title: "Ethics", room: "M7", capacity: 20, lesson_type: "Man
 
 
 ethics.grade = grade
-ethics.teacher = ethics_teacher
+ethics.teacher = english_teacher
 ethics.save
 
 
@@ -198,7 +167,7 @@ puts "All Mandetory lessons created"
 sports = Lesson.new(title: "Sports", room: "G1", capacity: 12, lesson_type: "Flex", weekly_periods: ["6", "12", "18", "4", "15"], details: "Soccer, Volleyball", homework: "PE_Theoretics: Muscles of the Back")
 
 sports.grade = grade
-sports.teacher = sports_teacher
+sports.teacher = history_teacher
 sports.save
 
 
@@ -206,7 +175,7 @@ painting = Lesson.new(title: "Painting", room: "A1", capacity: 10, lesson_type: 
 
 
 painting.grade = grade
-painting.teacher = painting_teacher
+painting.teacher = english_teacher
 painting.save
 
 
@@ -215,12 +184,12 @@ it = Lesson.new(title: "IT", room: "C1", capacity: 13, lesson_type: "Flex", week
 
 
 it.grade = grade
-it.teacher = it_teacher
+it.teacher = math_teacher
 it.save
 
 
 
-biology = Lesson.new(title: "Biology", room: "M7", capacity: 10, lesson_type: "Flex", weekly_periods: ["6", "12", "8", "4", "15"], details: "Frog´s anatomy", homework: "Read pages 168 to 171, then excersises 1 and 2 on page 171")
+biology = Lesson.new(title: "Biology", room: "M7", capacity: 10, lesson_type: "Flex", weekly_periods: ["6", "12", "4", "15"], details: "Frog´s anatomy", homework: "Read pages 168 to 171, then excersises 1 and 2 on page 171")
 
 
 biology.grade = grade
@@ -232,7 +201,7 @@ biology.save
 apcalc = Lesson.new(title: "AP-Calc.", room: "M13", capacity: 10, lesson_type: "Flex", weekly_periods: ["16", "8", "18", "19"], details: "Calculus of variations", homework: "Excersises 35-37 in the book")
 
 apcalc.grade = grade
-apcalc.teacher = apcalc_teacher
+apcalc.teacher = biology_teacher
 apcalc.save
 
 puts "All Flex lessons created"
