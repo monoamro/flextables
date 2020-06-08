@@ -1,0 +1,9 @@
+<%= simple_form_for [@lesson] do |f| %>
+  <div class="form-inputs text-center">
+    <%= f.input :details %> <br>
+    <%= f.input :homework %> <br>
+  </div>
+  <div class="form-actions text-center">
+    <%= f.submit "Update lesson", class: "btn submits-new sign-up mt-5" %>
+  </div>
+<% end %>
