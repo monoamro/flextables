@@ -31,7 +31,39 @@ puts "#{grade.name} was created"
 
 puts "Creating users"
 # student user
-student_user = User.create(email: "student1@flextables.de", password: 123456, first_name: "John", last_name: "Whiley")
+    student_user = User.create(email: "student1@flextables.de", password: 123456, first_name: "John", last_name: "Whiley")
+  student_user_2 = User.create(email: "student2@flextables.de", password: 123456, first_name: "Sarah", last_name: "McPhearson")
+  student_user_3 = User.create(email: "student3@flextables.de", password: 123456, first_name: "Maria", last_name: "Rossi")
+  student_user_4 = User.create(email: "student4@flextables.de", password: 123456, first_name: "Benjamin", last_name: "Schmidt")
+  student_user_5 = User.create(email: "student5@flextables.de", password: 123456, first_name: "Erich", last_name: "Meyer")
+  student_user_6 = User.create(email: "student6@flextables.de", password: 123456, first_name: "Jakob", last_name: "Schult")
+  student_user_7 = User.create(email: "student7@flextables.de", password: 123456, first_name: "Julia", last_name: "Wagner")
+  student_user_8 = User.create(email: "student8@flextables.de", password: 123456, first_name: "Martin", last_name: "Fischer")
+  student_user_9 = User.create(email: "student9@flextables.de", password: 123456, first_name: "Michael", last_name: "Schneider")
+ student_user_10 = User.create(email: "student10@flextables.de", password: 123456, first_name: "Andreas", last_name: "Wolf")
+ student_user_11 = User.create(email: "student11@flextables.de", password: 123456, first_name: "Martina", last_name: "Lange")
+ student_user_12 = User.create(email: "student12@flextables.de", password: 123456, first_name: "Thomas", last_name: "McMillan")
+ student_user_13 = User.create(email: "student13@flextables.de", password: 123456, first_name: "Johannes", last_name: "Kötter")
+ student_user_14 = User.create(email: "student14@flextables.de", password: 123456, first_name: "Esra", last_name: "Akay")
+ student_user_15 = User.create(email: "student15@flextables.de", password: 123456, first_name: "Timur", last_name: "Gencer")
+ student_user_16 = User.create(email: "student16@flextables.de", password: 123456, first_name: "Nikos", last_name: "Tsoukalos")
+ student_user_17 = User.create(email: "student17@flextables.de", password: 123456, first_name: "Jann", last_name: "Torgerson")
+ student_user_18 = User.create(email: "student18@flextables.de", password: 123456, first_name: "Bartolo", last_name: "Perez")
+ student_user_19 = User.create(email: "student19@flextables.de", password: 123456, first_name: "Corina", last_name: "Braatz")
+ student_user_20 = User.create(email: "student20@flextables.de", password: 123456, first_name: "Anna", last_name: "Mayerhofer")
+ student_user_21 = User.create(email: "student21@flextables.de", password: 123456, first_name: "Elisabeth", last_name: "Busche")
+ student_user_22 = User.create(email: "student22@flextables.de", password: 123456, first_name: "Julian", last_name: "Laub")
+ student_user_23 = User.create(email: "student23@flextables.de", password: 123456, first_name: "Arda", last_name: "Kalin")
+ student_user_24 = User.create(email: "student24@flextables.de", password: 123456, first_name: "Laura", last_name: "Kirschholtes")
+ student_user_25 = User.create(email: "student25@flextables.de", password: 123456, first_name: "Francesco", last_name: "Filingeri")
+ student_user_26 = User.create(email: "student26@flextables.de", password: 123456, first_name: "Tim", last_name: "Cichoracki")
+ student_user_27 = User.create(email: "student27@flextables.de", password: 123456, first_name: "Sarah", last_name: "Bieganski")
+ student_user_28 = User.create(email: "student28@flextables.de", password: 123456, first_name: "Omar", last_name: "Alomar")
+ student_user_29 = User.create(email: "student29@flextables.de", password: 123456, first_name: "Celine", last_name: "Aarns")
+ student_user_30 = User.create(email: "student30@flextables.de", password: 123456, first_name: "Gözde", last_name: "Caglar")
+
+student_users = [student_user, student_user_2,student_user_3, student_user_4, student_user_5, student_user_6, student_user_7, student_user_8, student_user_9, student_user_10, student_user_11, student_user_12, student_user_13, student_user_14, student_user_15, student_user_16, student_user_17, student_user_18, student_user_19, student_user_20, student_user_21, student_user_22, student_user_23, student_user_24, student_user_25, student_user_26, student_user_27, student_user_28, student_user_29, student_user_30]
+
 
 #Mandetory teachers users
 math_teacher_user = User.create(email: "mathteacher@flextables.de", password: 123456, first_name: "Malben", last_name: "Franco")
@@ -51,10 +83,12 @@ apcalc_teacher_user = User.create(email: "apcalcteacher@flextables.de", password
 
 puts "Creating students"
 
-student = Student.new
-student.user = student_user
-student.grade = grade
-student.save!
+students = student_users.map do |user|
+  student = Student.new
+  student.user = user
+  student.grade = grade
+  student.save!
+end
 
 puts "#{student.user.first_name} was made a student"
 
@@ -205,20 +239,21 @@ puts "All Flex lessons created"
 
 
 #creating time_slots
+students.each do |student|
 
-("1".."20").each do |weekly_period|
-  lessons = Lesson.all
-  time_slot = TimeSlot.new
-  time_slot.student = student
-  time_slot.weekly_period = weekly_period
-  lessons.each do |lesson|
-    if lesson.weekly_periods.include?(weekly_period) && lesson.lesson_type == "Mandetory"
-      time_slot.lesson = lesson
+  ("1".."20").each do |weekly_period|
+    lessons = Lesson.all
+    time_slot = TimeSlot.new
+    time_slot.student = student
+    time_slot.weekly_period = weekly_period
+    lessons.each do |lesson|
+      if lesson.weekly_periods.include?(weekly_period) && lesson.lesson_type == "Mandetory"
+        time_slot.lesson = lesson
+      end
+    time_slot.save
     end
-  time_slot.save
   end
 end
-
 
 
 
