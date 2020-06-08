@@ -62,7 +62,7 @@ puts "Creating users"
  student_user_29 = User.create(email: "student29@flextables.de", password: 123456, first_name: "Celine", last_name: "Aarns")
  student_user_30 = User.create(email: "student30@flextables.de", password: 123456, first_name: "Gözde", last_name: "Caglar")
 
-student_users = [student_user, student_user_2,student_user_3, student_user_4, student_user_5, student_user_6, student_user_7, student_user_8, student_user_9, student_user_10, student_user_11, student_user_12, student_user_13, student_user_14, student_user_15, student_user_16, student_user_17, student_user_18, student_user_19, student_user_20, student_user_21, student_user_22, student_user_23, student_user_24, student_user_25, student_user_26, student_user_27, student_user_28, student_user_29, student_user_30]
+student_users = [student_user, student_user_2, student_user_3, student_user_4, student_user_5, student_user_6, student_user_7, student_user_8, student_user_9, student_user_10, student_user_11, student_user_12, student_user_13, student_user_14, student_user_15, student_user_16, student_user_17, student_user_18, student_user_19, student_user_20, student_user_21, student_user_22, student_user_23, student_user_24, student_user_25, student_user_26, student_user_27, student_user_28, student_user_29, student_user_30]
 
 
 #Mandetory teachers users
