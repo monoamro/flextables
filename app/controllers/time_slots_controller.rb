@@ -2,6 +2,7 @@ class TimeSlotsController < ApplicationController
 
   def index
     @time_slots = current_user.students.first.time_slots
+    @time_slot = TimeSlot.new
     if current_user.teacher?
       # instance variables for teacher
       # here would go something like @student = Student.find(params[:student_id])
@@ -15,17 +16,12 @@ class TimeSlotsController < ApplicationController
     end
   end
 
-  def new
-    @time_slot = TimeSlot.new
-    @weekly_period = params[:weekly_period]
-  end
-
   def create
     @lesson = Lesson.find_by(title: time_slot_params[:lesson])
     @weekly_period = time_slot_params[:weekly_period]
     @time_slot = TimeSlot.new(lesson: @lesson, weekly_period: @weekly_period)
     @time_slot.student = current_user.students.first
-    if @time_slot.save
+    if @time_slot.save!
       redirect_to time_slots_path
     else
       render :new
