@@ -1,9 +1,20 @@
 <%= simple_form_for [@lesson] do |f| %>
-  <div class="form-inputs text-center">
-    <%= f.input :details %> <br>
-    <%= f.input :homework %> <br>
-  </div>
-  <div class="form-actions text-center">
-    <%= f.submit "Update lesson", class: "btn submits-new sign-up mt-5" %>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="add-edit-form">
+          <div class="form-inputs text-center">
+            <%= f.input :details, :input_html => {:rows => 2} %> <br>
+            <%= f.input :homework, :input_html => {:rows => 6} %> <br>
+          </div>
+          <div class="center">
+            <div class="form-actions text-center">
+              <%= f.submit "Update lesson", class: "btn submits-new sign-up mt-5 mb-5" %>
+            </div>
+          </div>
+      </div>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>

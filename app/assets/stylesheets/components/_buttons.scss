@@ -23,9 +23,11 @@
 }
  // add lesson button
  .submits-new {
-    width: auto;
+    width: 33%;
     display: inline-block;
     float: center;
+    border-radius: 4px;
+    font-size: 85%;
     // margin-left: 2%;
 
   .submits-new:hover {
