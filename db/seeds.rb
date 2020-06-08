@@ -240,7 +240,6 @@ puts "All Flex lessons created"
 
 #creating time_slots
 students.each do |student|
-
   ("1".."20").each do |weekly_period|
     lessons = Lesson.all
     time_slot = TimeSlot.new
