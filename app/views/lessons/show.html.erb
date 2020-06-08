@@ -1,8 +1,11 @@
-<div class="container textarea lesson-show" style="background-color: #FCFEFE;">
+<div class="textarea lesson-show" style="background-color: #FCFEFE;">
   <h1 class="lesson-title text-center"> <%= @lesson.title %> </h1>
   <p class="lesson-details"> <%= @lesson.details %> </p>
   <h4 class="homework-title"><strong>Homework:</strong></h4>
   <p class="lesson-details"> <%= @lesson.homework %> </p>
-  <%= link_to "Update details and homework", edit_lesson_path(@lesson) %>
-  <%= link_to "Back to my lessons", lessons_path %>
+  <% if current_user.teacher? %>
+    <%= link_to "Update details and homework", edit_lesson_path(@lesson) %>
+    <%= link_to "Back to my lessons", lessons_path %>
+  <% end %>
 </div>
+
