@@ -7,10 +7,10 @@
   background-repeat: no-repeat;
   height: 100vh;
 
-  font-size: 2rem;
+  font-size: 18px;
   font-family: 'Quicksand', sans-serif;
+  font-weight: lighter;
   color: white;
-  opacity: .95;
 }
 
 .mainbody * {
@@ -96,4 +96,16 @@
   font-weight: 400;
   line-height: 1.5;
   text-align: left;
+}
+
+.form-inputs {
+  outline: none;
+  border: none;
+
+  border-radius: 0px 5px 5px 0px;
+  transition: 0.2s linear;
+}
+
+.input {
+  font-size: 50px;
 }
