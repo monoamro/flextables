@@ -9,4 +9,19 @@ class LessonsController < ApplicationController
     @lesson = Lesson.find(params[:id])
   end
 
+  def edit
+    @lesson = Lesson.find(params[:id])
+  end
+
+  def update
+    @lesson = Lesson.update(lesson_params)
+    redirect_to lesson_path(@lesson)
+  end
+
+  private
+
+  def lesson_params
+    params.require(:lesson).permit(:details, :homework)
+  end
+
 end
