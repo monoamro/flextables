@@ -39,18 +39,18 @@
               <div class="field-set">
                 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                   <div class="form-inputs">
-                    <p><%= f.input :email,
+                    <%= f.input :email,
                                 required: false,
                                 autofocus: true,
-                                input_html: { autocomplete: "email" } %></p>
-                    <p><%= f.input :password,
+                                input_html: { autocomplete: "email" } %>
+                    <%= f.input :password,
                                 required: false,
-                                input_html: { autocomplete: "current-password" } %></p>
-                    <p><%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %></p>
+                                input_html: { autocomplete: "current-password" } %>
+                    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
                   </div>
 
                   <div class="form-actions text-center">
-                    <%= f.submit "Log in", class: "btn log-in p" %>
+                    <%= f.submit "Log in", class: "btn log-in" %>
                   </div>
                 <% end %>
               </div>
