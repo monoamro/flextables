@@ -16,11 +16,6 @@ class TimeSlotsController < ApplicationController
     end
   end
 
-  # def new
-  #   @time_slot = TimeSlot.new
-  #   @weekly_period = params[:weekly_period]
-  # end
-
   def create
     @lesson = Lesson.find_by(title: time_slot_params[:lesson])
     @weekly_period = time_slot_params[:weekly_period]
