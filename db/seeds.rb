@@ -135,7 +135,7 @@ history.teacher = history_teacher
 history.save
 
 
-german = Lesson.new(title: "German", room: "M7", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["2", "13", "9"], details: "Adjektivdeklination Typ2 Typ3, Adjektivgruppen", homework: "Deutsch als Fremdsprache 3, Seite 47, Aufgabe 1-3")
+german = Lesson.new(title: "German", room: "M7", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["2", "13", "5"], details: "Adjektivdeklination Typ2 Typ3, Adjektivgruppen", homework: "Deutsch als Fremdsprache 3, Seite 47, Aufgabe 1-3")
 
 
 german.grade = grade
