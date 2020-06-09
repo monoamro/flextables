@@ -5,7 +5,7 @@ const schedule = () => {
   //if browser does not support transitions - use a different event to trigger them
   if( !transitionsSupported ) transitionEnd = 'noTransition';
 
-  //should add a loding while the events are organized
+  //should add a loading while the events are organized
 
   function SchedulePlan( element ) {
     this.element = element;
@@ -72,7 +72,7 @@ const schedule = () => {
 
       //detect click on the event and open the modal
       $(this).on('click', 'a', function(event){
-        if (event.currentTarget.innerText !== 'add class') {
+        if (event.currentTarget.innerText !== 'Launch demo modal') {
           event.preventDefault();
           if( !self.animating ) self.openModal($(this));
         }

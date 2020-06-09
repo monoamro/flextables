@@ -1,9 +1,9 @@
 <div class="mainbody">
   <header>
-    <div class="container">
+    <div class="container" id="headcontent">
       <div class="row d-flex align-items-center">
         <div class="col-sm-3 logo">
-          <%= image_tag asset_url("newlogo.png") %>
+          <%= image_tag asset_url("newlogo2_white.png") %>
         </div>
 
         <div class="col-sm-6 justify-content-center">
@@ -14,26 +14,23 @@
     </div>
   </header>
 
-  <div class="container">
+  <div class="container" id="maincontent">
     <div class="row">
       <div class="col-sm-6 d-flex align-items-center">
         <div class="textarea p-4">
-          <h4>What is FlexTables?</h4>
+          <h2>What is FlexTables?</h4>
           <p>FlexTables is optimist for schools with "Lernbüro" System.</p>
           <br>
-          <h4>For Teachers:</h4>
+          <h2>For Teachers:</h4>
           <p>Keep track of your student's flex classes, digitalise content and homework and keep track of attendance.</p>
           <br>
-          <h4>For Students:</h4>
+          <h2>For Students:</h4>
           <p>Organise your flex classes and keep track of your homework.</p>
         </div>
       </div>
 
       <div class="col-sm-6">
-        <div class="overlay">
-          <div class="ft-forms">
-            <div class="con textarea p-5">
-
+        <div class="textarea p-5">
               <header class="head-form">
                 <h2>Let's start</h2>
               </header>
@@ -57,10 +54,10 @@
                   </div>
                 <% end %>
               </div>
+
               <div class="d-flex justify-content-center">
                 <%= render "devise/shared/links" %>
               </div>
-            </div>
           </div>
         </div>
       </div>

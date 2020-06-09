@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet');
 
 .mainbody {
-  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
-  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  background-image: asset-url("banner.jpg");
+  background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   height: 100vh;
 
   font-size: 2rem;
-  font-family: 'Vibur', cursive;
-  font-family: 'Abel', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
   opacity: .95;
 }
 
@@ -21,108 +22,45 @@
 
 .mainbody p {
   font-size: 18px;
-  font-family: 'Abel', sans-serif;
-}
-
-.mainbody h4 {
-  font-size: 20px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: lighter;
 }
 
 .mainbody h1 {
   font-size: 40px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
 }
 
 .mainbody h2 {
-  font-size: 18px;
-  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: medium;
+}
+
+.mainbody h3 {
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: lighter;
 }
 
   /* //////////////////////////////////////////// */
 
-.mainbody .textarea {
-    width: 450px;
-    min-height: 250px;
-    height: auto;
-    border-radius: 5px;
-    margin: 2% auto;
-    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
-    background-color: rgba(227, 253, 245, 0.3);
-    padding: 2%;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #0E0000;
-    text-align: left;
+#headcontent {
+  margin: auto !important;
+}
 
-    .con {
-      display: -webkit-flex;
-      display: flex;
+.mainbody header {
+  margin: 2% auto 0% auto;
+  text-align: center;
+  margin:0;
 
-      -webkit-justify-content: space-around;
-      justify-content: space-around;
+  p {
+    letter-spacing: 0.05em;
 
-      -webkit-flex-wrap: wrap;
-      flex-wrap: wrap;
-
-      margin: 0 auto;
-    }
-  }
-
-  .mainbody .ts-form {
-      width: 450px;
-      min-height: 500px;
-      height: auto;
-      border-radius: 5px;
-      margin: 2% auto;
-      box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
-      padding: 2%;
-    /*  background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%); */
-      background-color: rgba(227, 253, 245, 0.3);
-  }
-  /* form Container */
-  .mainbody form .con {
-      display: -webkit-flex;
-      display: flex;
-
-      -webkit-justify-content: space-around;
-      justify-content: space-around;
-
-      -webkit-flex-wrap: wrap;
-      flex-wrap: wrap;
-
-      margin: 0 auto;
-  }
-
-  /* the header form form */
-  .mainbody header {
-      margin: 2% auto 0% auto;
-      text-align: center;
-      margin:0;
-  }
-  /* Login title form form */
-  .mainbody header h2 {
-      font-size: 250%;
-      font-family: 'Playfair Display', serif;
-      color: #3e403f;
-  }
-  /*  A welcome message or an explanation of the login form */
-  .mainbody header p {letter-spacing: 0.05em;}
-
-  .mainbody .logo {
+    .logo {
       width: 40%;
       opacity: 0.95;
-  }
-  .add-edit-form {
-    background-color: #F7BD7F;
-    width: 100%;
-    max-width: 400px;
-    padding:16px;
-    margin-top: 64px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 4px;
   }
   /* //////////////////////////////////////////// */
 
@@ -131,30 +69,52 @@
       color: #333;
       padding: 14.5px 0px 15px 9px;
       border-radius: 5px 0px 0px 5px;
+      opacity: 0.95;
+    }
   }
+}
 
-  /* inputs form  */
-  input[class="form-input"]{
-      width: 240px;
-      height: 50px;
+.add-edit-form {
+  background-color: #F7BD7F;
+  width: 100%;
+  max-width: 400px;
+  padding:16px;
+  margin-top: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+}
 
-      margin-top: 2%;
-      padding: 15px;
+////////////////////////////////////////////
 
-      font-size: 16px;
-      font-family: 'Abel', sans-serif;
-      color: #5E6472;
+// .mainbody .con {
+//   display: -webkit-flex;
+//   display: flex;
+//
+//   -webkit-justify-content: space-around;
+//   justify-content: space-around;
+//
+//   -webkit-flex-wrap: wrap;
+//   flex-wrap: wrap;
+//
+//   margin: 0 auto;
+// }
 
-      outline: none;
-      border: none;
+#maincontent {
+  margin: auto !important;
+}
 
-      border-radius: 0px 5px 5px 0px;
-      transition: 0.2s linear;
-
-  }
-  input[id="txt-input"] {width: 250px;}
-  /* focus  */
-  input:focus {
-      transform: translateX(-2px);
-      border-radius: 5px;
-  }
+.mainbody .textarea {
+  width: 450px;
+  min-height: 250px;
+  height: auto;
+  border-radius: 5px;
+  margin: 2% auto;
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  background-color: black;
+  opacity: 60%;
+  padding: 2%;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}

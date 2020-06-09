@@ -13,3 +13,8 @@
 @import "pages/index";
 @import "components/footer";
 @import "pages/home";
+
+
+.modal-backdrop {
+  z-index: 0 !important
+}
