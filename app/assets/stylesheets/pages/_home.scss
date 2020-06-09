@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet');
 
 /////// body of landing page//////
@@ -27,7 +28,6 @@
 
 .headcontent {
   margin: auto; 
-
   p, h1, h2, h3 {
     font-family: 'Quicksand', sans-serif;
     color: white;
@@ -44,10 +44,20 @@
 
     .logo {
       width: 40%;
-      opacity: 0.95; 
+      opacity: 0.95;
+  }
+  /* //////////////////////////////////////////// */
+
+  .input-item {
+      background: #fff;
+      color: #333;
+      padding: 14.5px 0px 15px 9px;
+      border-radius: 5px 0px 0px 5px;
+      opacity: 0.95;
     }
   }
 }
+
 
 p.headcontent {
   font-size: 18px;
