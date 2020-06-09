@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet');
 
 .mainbody {
@@ -46,7 +47,7 @@
   /* //////////////////////////////////////////// */
 
 #headcontent {
-  margin: auto !important; 
+  margin: auto !important;
 }
 
 .mainbody header {
@@ -59,9 +60,29 @@
 
     .logo {
       width: 40%;
-      opacity: 0.95; 
+      opacity: 0.95;
+  }
+  /* //////////////////////////////////////////// */
+
+  .input-item {
+      background: #fff;
+      color: #333;
+      padding: 14.5px 0px 15px 9px;
+      border-radius: 5px 0px 0px 5px;
+      opacity: 0.95;
     }
   }
+}
+
+.add-edit-form {
+  background-color: #F7BD7F;
+  width: 100%;
+  max-width: 400px;
+  padding:16px;
+  margin-top: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
 }
 
 ////////////////////////////////////////////
@@ -69,18 +90,18 @@
 // .mainbody .con {
 //   display: -webkit-flex;
 //   display: flex;
-//   
+//
 //   -webkit-justify-content: space-around;
 //   justify-content: space-around;
-//   
+//
 //   -webkit-flex-wrap: wrap;
 //   flex-wrap: wrap;
-//   
+//
 //   margin: 0 auto;
 // }
 
 #maincontent {
-  margin: auto !important; 
+  margin: auto !important;
 }
 
 .mainbody .textarea {
