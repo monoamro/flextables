@@ -1,0 +1,16 @@
+<ul>
+  <% spots.each do |spot| %>
+    <% current_lesson = Lesson.select { |lesson| lesson.teacher_id == current_user.teachers[0].id && lesson.weekly_periods.include?(spot) } %>
+      <% if current_lesson[0].nil? %>
+        <li class="single-event" data-start="<% if (1..5).include?(spot.to_i)%>9<% elsif (6..10).include?(spot.to_i) %>10<% elsif (11..15).include?(spot.to_i) %>11<% elsif (16..20).include?(spot.to_i) %>13<% end %>:00" data-end="<% if (1..5).include?(spot.to_i)%>9<% elsif (6..10).include?(spot.to_i) %>10<% elsif (11..15).include?(spot.to_i) %>11<% elsif (16..20).include?(spot.to_i) %>13<% end %>:45">
+          <h1>Free</h1>
+        </li>
+      <% else %>
+        <li class="single-event" data-start="<% if (1..5).include?(spot.to_i)%>9<% elsif (6..10).include?(spot.to_i) %>10<% elsif (11..15).include?(spot.to_i) %>11<% elsif (16..20).include?(spot.to_i) %>13<% end %>:00" data-end="<% if (1..5).include?(spot.to_i)%>9<% elsif (6..10).include?(spot.to_i) %>10<% elsif (11..15).include?(spot.to_i) %>11<% elsif (16..20).include?(spot.to_i) %>13<% end %>:45" data-content="/lessons/<%= current_lesson[0].id %>" data-event="event-<%= current_lesson[0].id %>">
+          <a href="#0">
+            <em class="event-name"><%= current_lesson[0].title %></em>
+          </a>
+        </li>
+      <% end %>
+  <% end %>
+</ul>
