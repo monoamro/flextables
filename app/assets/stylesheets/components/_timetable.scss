@@ -1,7 +1,15 @@
+#week {
+  font-family:"helvetica", sans-serif;
+  font-size:20px;
+  text-align: center;
+  margin-top:20px;
+  margin-bottom: 0;
+}
 .empty {
   display: flex;
   justify-content: center;
   vertical-align: center;
+  background-color: white;
   button {
     background-color: rgba(255,255,255,0);
     color: black;
@@ -13,11 +21,32 @@
     &:hover {
       background-color: rgba(255,255,255,0);
       color: black;
+      border: 0;
     }
     &:active {
-      background-color: rgba(255,255,255,0);
+      background-color: white;
       color: black;
+      border: 0;
     }
+
+    &:focus {
+      background-color: white;
+      color: black;
+      border: 0;
+    }
+
+    &:visited {
+      background-color: white;
+      color: black;
+      border: 0;
+    }
+
+    &:focus-within {
+      background-color: white;
+      color: black;
+      border: 0;
+    }
+
   }
 }
 
@@ -47,3 +76,22 @@
   margin: 26.7rem auto;
 }
 
+.lesson-show-student {
+  font-family: "helvetica", sans-serif;
+  .lesson-title {
+    font-size:24px;
+    font-weight:bold;
+  }
+
+  .lesson-details {
+    font-size:16px;
+    margin-top: 20px;
+  }
+
+  .homework-title {
+    font-size:16px;
+    font-weight:bold;
+    margin-top: 20px;
+  }
+
+}

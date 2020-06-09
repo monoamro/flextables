@@ -1,5 +1,5 @@
 <% if current_user.teacher? %>
-  <div class="container textarea lesson-show" style="background-color: #FCFEFE;">
+  <div class="container textarea lesson-show-teacher" style="background-color: #FCFEFE;">
     <h1 class="lesson-title text-center"> <%= @lesson.title %> </h1>
     <p class="lesson-details"> <%= @lesson.details %> </p>
     <h4 class="homework-title"><strong>Homework:</strong></h4>
@@ -16,7 +16,7 @@
     </ul>
   </div>
 <% elsif current_user.student? %>
-  <div class="container textarea lesson-show" style="background-color: #FCFEFE;">
+  <div class="container textarea lesson-show-student " style="background-color: #FCFEFE;">
     <h1 class="lesson-title text-center"> <%= @lesson.title %> </h1>
     <p class="lesson-details"> <%= @lesson.details %> </p>
     <h4 class="homework-title"><strong>Homework:</strong></h4>
