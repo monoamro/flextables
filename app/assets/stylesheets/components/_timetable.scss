@@ -1,7 +1,49 @@
-.teacherroom {
+.empty {
   display: flex;
+  justify-content: center;
+  vertical-align: center;
+  button {
+    background-color: rgba(255,255,255,0);
+    color: black;
+    border: 0;
+    font-family: "helvetica", sans-serif;
+    font-weight: bold;
+    font-size:16px;
+    padding: 0 60px;
+    &:hover {
+      background-color: rgba(255,255,255,0);
+      color: black;
+    }
+    &:active {
+      background-color: rgba(255,255,255,0);
+      color: black;
+    }
+  }
 }
 
-.wrapper {
-  display: flex;
+.form-inputs {
+  #time_slot_lesson {
+    width:400px;
+    margin: 30px;
+  }
 }
+
+#exampleModalLabel {
+  font-family: "helvetica", sans-serif;
+  font-weight:bold;
+  padding: 20px;
+}
+
+
+.add-lesson {
+  background-color:rgba(0,0,0,0.6);
+  margin:2rem;
+  font-family: "helvetica", sans-serif;
+}
+
+
+.modal-dialog {
+  max-width: 500px;
+  margin: 26.7rem auto;
+}
+
