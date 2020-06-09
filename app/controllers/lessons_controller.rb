@@ -12,7 +12,7 @@ class LessonsController < ApplicationController
 
   def show
     @lesson = Lesson.find(params[:id])
-    @spot = params[:spot].split(".")[0]
+    @spot = params[:spot].split(".")[0] if current_user.teacher?
   end
 
   def edit
