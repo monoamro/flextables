@@ -3,6 +3,11 @@ class LessonsController < ApplicationController
 
   def index
     @lessons = Lesson.all.select { |lesson| lesson.teacher == current_user.teachers.first }
+    @monday_spots    = %w(1 6 11 16)
+    @tuesday_spots   = %w(2 7 12 17)
+    @wednesday_spots = %w(3 8 13 18)
+    @thursday_spots  = %w(4 9 14 19)
+    @friday_spots    = %w(5 10 15 20)
   end
 
   def show
