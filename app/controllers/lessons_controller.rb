@@ -11,7 +11,9 @@ class LessonsController < ApplicationController
   end
 
   def show
+    p params
     @lesson = Lesson.find(params[:id])
+    p @spot = params[:spot].split(".")[0]
   end
 
   def edit
@@ -29,5 +31,4 @@ class LessonsController < ApplicationController
   def lesson_params
     params.require(:lesson).permit(:details, :homework)
   end
-
 end

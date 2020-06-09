@@ -7,5 +7,12 @@
     <%= link_to "Update details and homework", edit_lesson_path(@lesson) %>
     <%= link_to "Back to my lessons", lessons_path %>
   <% end %>
+  <ul>
+    <% timeslots = @lesson.time_slots.select { |timeslot| timeslot.weekly_period == @spot } %>
+    <% timeslots.each do |ts| %>
+      <li><%= ts.student.user.first_name %> <%= ts.student.user.last_name %></li>
+    <% end %>
+  </ul>
 </div>
+
 
