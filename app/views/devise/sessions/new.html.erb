@@ -1,71 +1,142 @@
 <div class="mainbody">
-  <header>
-    <div class="container" id="headcontent">
-      <div class="row d-flex align-items-center">
-        <div class="col-sm-3 logo">
-          <%= image_tag asset_url("newlogo2_white.png") %>
-        </div>
+  <div class="banner">
+    <header>
+      <div class="container headcontent">
+        <div class="row d-flex align-items-center">
+          <div class="col-sm-3 logo">
+            <%= image_tag asset_url("newlogo2_white.png") %>
+          </div>
 
-        <div class="col-sm-6 justify-content-center">
-          <h1>Welcome to FlexClasses</h1>
-          <p>The easy way to plan your Flex Classes</p>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <div class="container" id="maincontent">
-    <div class="row">
-      <div class="col-sm-6 d-flex align-items-center">
-        <div class="textarea p-4">
-          <h2>What is FlexTables?</h4>
-          <p>FlexTables is optimist for schools with "Lernbüro" System.</p>
-          <br>
-          <h2>For Teachers:</h4>
-          <p>Keep track of your student's flex classes, digitalise content and homework and keep track of attendance.</p>
-          <br>
-          <h2>For Students:</h4>
-          <p>Organise your flex classes and keep track of your homework.</p>
+          <div class="col-sm-6 justify-content-center">
+            <h1 class="headcontent">Welcome to FlexTables</h1>
+            <p class="headcontent">The easy way to plan your Flex Classes</p>
+          </div>
         </div>
       </div>
+    </header>
 
-      <div class="col-sm-6">
-        <div class="textarea p-5">
-              <header class="head-form">
-                <h2>Let's start</h2>
-              </header>
-              <br>
+    <div class="container maincontent">
+      <div class="row">
+        <div class="col-sm-6 d-flex align-items-center">
+          <div class="textarea p-4">
+            <h2 class="maincontent">What is FlexTables?</h2>
+            <p class="maincontent">FlexTables is optimist for schools with "Lernbüro" System.</p>
+            <br>
+            <h2 class="maincontent">For Teachers:</h2>
+            <p class="maincontent">Keep track of your student's flex classes, digitalise content and homework and keep track of attendance.</p>
+            <br>
+            <h2 class="maincontent">For Students:</h2>
+            <p class="maincontent">Organise your flex classes and keep track of your homework.</p>
+          </div>
+        </div>
 
-              <div class="field-set">
-                <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                  <div class="form-inputs">
-                    <%= f.input :email,
-                                required: false,
-                                autofocus: true,
-                                input_html: { autocomplete: "email", class: "lg-input" },
-                                label_html: { class: "lg-label" } %>
-                    <%= f.input :password,
-                                required: false,
-                                input_html: { autocomplete: "current-password", class: "lg-input" },
-                                label_html: { class: "lg-label" } %>
-                    <%= f.input :remember_me, 
-                                input_html: { class: "rem-input" },
-                                label_html: { class: "rem-label" }, 
-                                as: :boolean if devise_mapping.rememberable? %>
-                  </div>
+        <div class="col-sm-6">
+          <div class="textarea p-5">
+            <header class="head-form">
+              <h2 class="maincontent">Let's start</h2>
+            </header>
+            <br>
 
-                  <div class="form-actions text-center">
-                    <%= f.submit "Log in", class: "btn log-in" %>
-                  </div>
-                <% end %>
-              </div>
+            <div class="field-set">
+              <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                <div class="form-inputs">
+                  <%= f.input :email,
+                              required: false,
+                              autofocus: true,
+                              input_html: { autocomplete: "email", class: "lg-input maincontent" },
+                              label_html: { class: "lg-label maincontent" } %>
+                  <%= f.input :password,
+                              required: false,
+                              input_html: { autocomplete: "current-password", class: "lg-input maincontent" },
+                              label_html: { class: "lg-label maincontent" } %>
+                  <%= f.input :remember_me, 
+                              input_html: { class: "rem-input maincontent" },
+                              label_html: { class: "rem-label maincontent" }, 
+                              as: :boolean if devise_mapping.rememberable? %>
+                </div>
+
+                <div class="form-actions text-center">
+                  <%= f.submit "Log in", class: "btn log-in" %>
+                </div>
+              <% end %>
 
               <div class="d-flex justify-content-center">
                 <%= render "devise/shared/links" %>
               </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="container ldp-content">
+    <div class="line-wrapper">
+      <div class="d-flex justify-content-between">
+        <hr class="ldp-content w-25">
+        <h2 class="ldp-content">About FlexTable System</h2>
+        <hr class="ldp-content w-25">
+      </div>
+    </div>
+  </div>
+
+  <div class="schoolsystem-banner">
+    <h1 class="sb-text">Lernbüro</h1>
+    <br>
+    <h2 class="sb-text">Make teaching more individual</h2>
+  </div>
+    
+  <div class="container ft-description">
+    <div class="mt-4">
+      <br>
+      <br>
+      <p class="ft-text">Das Lernarrangement Lernbüro bietet den Kindern die Möglichkeit, 
+      Lernen als selbstverantwortlichen und selbst gesteu-erten Prozess zu begreifen. 
+      Es ermöglicht einen hohen Grad an Differenzierung. 
+      Jeder Schüler kann sein eigenes Lernvor-haben planen, durchführen und reflektierend abschließen.</p>
+      <br>
+      <br>
+      <p class="ft-text">Das Lernarrangement Lernbüro bietet den Kindern die Möglichkeit, 
+      Lernen als selbstverantwortlichen und selbst gesteu-erten Prozess zu begreifen. 
+      Es ermöglicht einen hohen Grad an Differenzierung. 
+      Jeder Schüler kann sein eigenes Lernvor-haben planen, durchführen und reflektierend abschließen.</p>
+    </div>
+  </div>
+
+  <div class="container hiw">
+    <div class="line-wrapper">
+      <div class="d-flex justify-content-between">
+        <hr class="hiw-lw w-25">
+        <h2 class="hiw-lw">How it works</h2>
+        <hr class="hiw-lw w-25">
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="hiw-card">
+          <h2 class="hiw-text">Share</h2>
+          <br>
+          <p class="hiw-text">Upload and share your favourite tunes</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="hiw-card">
+          <h2 class="hiw-text">Share</h2>
+          <br>
+          <p class="hiw-text">Upload and share your favourite tunes</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="hiw-card">
+          <h2 class="hiw-text">Share</h2>
+          <br>
+          <p class="hiw-text">Upload and share your favourite tunes</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
