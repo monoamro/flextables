@@ -11,9 +11,8 @@ class LessonsController < ApplicationController
   end
 
   def show
-    p params
     @lesson = Lesson.find(params[:id])
-    p @spot = params[:spot].split(".")[0]
+    @spot = params[:spot].split(".")[0]
   end
 
   def edit
