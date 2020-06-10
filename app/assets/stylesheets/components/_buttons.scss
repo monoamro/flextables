@@ -22,7 +22,17 @@
     margin-left: 2%;
 }
 
-.frgt-pass {background: transparent;}
+.frgt-pass {
+    background: transparent;
+    color: white;
+    padding-top: 10px !important;
+    font-size: 14px;
+}
+
+.frgt-pass:hover {
+    color: white; 
+}
+
 
 .sign-up {background: #B8F2E6;}
 

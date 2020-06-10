@@ -1,3 +1,5 @@
+import attendance from '../packs/attendance.js'
+
 const schedule = () => {
   jQuery(document).ready(function($){
   var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
@@ -58,6 +60,7 @@ const schedule = () => {
       this.checkEventModal('desktop');
       this.element.removeClass('loading');
     } else {
+      this.placeEvents();
       this.element.removeClass('loading');
     }
   };
@@ -95,9 +98,11 @@ const schedule = () => {
       //place each event in the grid -> need to set top position and height
       var start = getScheduleTimestamp($(this).attr('data-start')),
         duration = getScheduleTimestamp($(this).attr('data-end')) - start;
-
-      var eventTop = self.eventSlotHeight*(start - self.timelineStart)/self.timelineUnitDuration,
-        eventHeight = self.eventSlotHeight*duration/self.timelineUnitDuration;
+      if (self.eventSlotHeight == 18) {
+        self.eventSlotHeight = 50
+      }
+        var eventTop = self.eventSlotHeight*(start - self.timelineStart)/self.timelineUnitDuration,
+          eventHeight = self.eventSlotHeight*duration/self.timelineUnitDuration;
 
       $(this).css({
         top: (eventTop -1) +'px',
@@ -122,8 +127,10 @@ const schedule = () => {
     this.modalBody.find('.event-info').load(event.parent().attr('data-content')+'.html .event-info > *', function(data){
       //once the event content has been loaded
       self.element.addClass('content-loaded');
-      const showPartial = jQuery.parseHTML(data)[14];
+      console.log(jQuery.parseHTML(data)[12]);
+      const showPartial = jQuery.parseHTML(data)[12].querySelector(".lesson-show");
       self.element[0].children[2].children[1].children[0].appendChild(showPartial);
+      attendance();
     });
 
     this.element.addClass('modal-is-open');
@@ -215,7 +222,6 @@ const schedule = () => {
         event.removeClass('selected-event');
       });
     } else {
-      console.log(event)
       var eventTop = event.offset().top - $(window).scrollTop(),
         eventLeft = event.offset().left,
         eventHeight = event.innerHeight(),

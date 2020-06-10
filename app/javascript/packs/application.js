@@ -31,7 +31,15 @@ import schedule from '../codepen/schedule.js'
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  schedule()
+
 });
 
+window.addEventListener('DOMContentLoaded', (event) => {
+  schedule();
+});
+
+
+
+
 import "controllers"
+

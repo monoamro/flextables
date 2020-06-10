@@ -75,7 +75,7 @@ Main Components
 -------------------------------- */
 .cd-schedule {
   position: relative;
-  margin: 2em 0;
+  margin: 1em 0;
 }
 .cd-schedule::before {
   /* never visible - this is used in js to check the current MQ */
@@ -86,7 +86,7 @@ Main Components
   .cd-schedule {
     width: 90%;
     max-width: 1400px;
-    margin: 2em auto;
+    margin: 1em auto;
   }
   .cd-schedule::after {
     clear: both;
@@ -216,7 +216,6 @@ Main Components
   .cd-schedule .events .events-group {
     width: 20%;
     float: left;
-    border: 1px solid #EAEAEA;
     /* reset style */
     margin-bottom: 0;
   }
@@ -242,7 +241,7 @@ Main Components
     margin-bottom: 0;
   }
   .cd-schedule .events .events-group > ul {
-    height: 950px;
+    height: 498px;
     /* reset style */
     display: block;
     overflow: visible;

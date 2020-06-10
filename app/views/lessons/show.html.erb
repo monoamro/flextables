@@ -1,11 +1,27 @@
-<div class="container textarea lesson-show" style="background-color: #FCFEFE;">
-  <h1 class="lesson-title text-center"> <%= @lesson.title %> </h1>
-  <p class="lesson-details"> <%= @lesson.details %> </p>
-  <h4 class="homework-title"><strong>Homework:</strong></h4>
-  <p class="lesson-details"> <%= @lesson.homework %> </p>
-  <% if current_user.teacher? %>
-    <%= link_to "Update details and homework", edit_lesson_path(@lesson) %>
-    <%= link_to "Back to my lessons", lessons_path %>
-  <% end %>
-</div>
+<% if current_user.teacher? %>
+  <div class="container textarea lesson-show" style="background-color: #FCFEFE;">
+    <h1 class="lesson-title text-center"> <%= @lesson.title %> </h1>
+    <p class="lesson-details"> <%= @lesson.details %> </p>
+    <h4 class="homework-title"><strong>Homework:</strong></h4>
+    <p class="lesson-details"> <%= @lesson.homework %> </p>
+    <% if current_user.teacher? %>
+      <%= link_to "Update details and homework", edit_lesson_path(@lesson) %>
+    <% end %>
+    <% timeslots = @lesson.time_slots.select { |timeslot| timeslot.weekly_period == @spot } %>
+    <% unless timeslots.empty? %>
+      <div class="form-check student-list">
+        <% timeslots.each_with_index do |ts, index| %>
+          <p class="student-attendance" style="cursor: default;"><%= ts.student.user.first_name %> <%= ts.student.user.last_name %></p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+<% elsif current_user.student? %>
+  <div class="container textarea lesson-show" style="background-color: #FCFEFE;">
+    <h1 class="lesson-title text-center"> <%= @lesson.title %> </h1>
+    <p class="lesson-details"> <%= @lesson.details %> </p>
+    <h4 class="homework-title"><strong>Homework:</strong></h4>
+    <p class="lesson-details"> <%= @lesson.homework %> </p>
+  </div>
+<% end %>
 
