@@ -31,49 +31,32 @@
 
 .headcontent {
   margin: auto; 
-  p, h1, h2, h3 {
-    font-family: 'Quicksand', sans-serif;
-    color: white;
-  }
+  padding-top: 80px;
+  padding-bottom: 100px;
+  text-align: center;
 }
+
+.hc-text {
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  line-height: 1.2;
+}
+
+p.hc-text {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+h1.hc-text {
+  font-size: 40px;
+  font-weight: bold;
+}
+
 
 .headcontent header {
   margin: 2% auto 0% auto;
   text-align: center;
   margin:0;
-
-  p {
-    letter-spacing: 0.05em;
-
-    .logo {
-      width: 40%;
-      opacity: 0.95;
-  }
-  /* //////////////////////////////////////////// */
-
-  .input-item {
-      background: #fff;
-      color: #333;
-      padding: 14.5px 0px 15px 9px;
-      border-radius: 5px 0px 0px 5px;
-      opacity: 0.95;
-    }
-  }
-}
-
-
-p.headcontent {
-  font-size: 18px;
-  font-weight: lighter;
-  font-family: 'Quicksand', sans-serif;
-  color: white;
-}
-
-h1.headcontent {
-  font-size: 40px;
-  font-weight: bold;
-  font-family: 'Quicksand', sans-serif;
-  color: white;
 }
 
 //////// infobox and login form: maincontent on landing page ///////
@@ -234,8 +217,7 @@ h3.ldp-content {
 
 .schoolsystem-banner {
   background-color: #1A2E3D;
-  height: 50px;
-  min-height: -moz-fit-content;
+  height: 10px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -339,7 +321,6 @@ p.hiw-text {
   text-align: center;
   max-width: 350px;
   min-width: 200px;
-  border-radius: 5px;
   height: auto;
   margin: 2% auto;
   background-color: white;
@@ -348,14 +329,17 @@ p.hiw-text {
   flex-direction: column;
   word-wrap: break-word;
   background-clip: border-box;
-  border: 1px solid #1A2E3D;
+  border-bottom: 1px solid #eeeeee;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .hiw-card-header {
   background-color: #1A2E3D;
   color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
-
 
 .hiw-card-info  {
   color: #1A2E3D;
