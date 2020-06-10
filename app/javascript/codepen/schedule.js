@@ -58,6 +58,7 @@ const schedule = () => {
       this.checkEventModal('desktop');
       this.element.removeClass('loading');
     } else {
+      this.placeEvents();
       this.element.removeClass('loading');
     }
   };
@@ -95,9 +96,11 @@ const schedule = () => {
       //place each event in the grid -> need to set top position and height
       var start = getScheduleTimestamp($(this).attr('data-start')),
         duration = getScheduleTimestamp($(this).attr('data-end')) - start;
-
-      var eventTop = self.eventSlotHeight*(start - self.timelineStart)/self.timelineUnitDuration,
-        eventHeight = self.eventSlotHeight*duration/self.timelineUnitDuration;
+      if (self.eventSlotHeight == 18) {
+        self.eventSlotHeight = 50
+      }
+        var eventTop = self.eventSlotHeight*(start - self.timelineStart)/self.timelineUnitDuration,
+          eventHeight = self.eventSlotHeight*duration/self.timelineUnitDuration;
 
       $(this).css({
         top: (eventTop -1) +'px',
