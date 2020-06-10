@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
       time_slots_path
     end
   end
+
+  def default_url_options
+  { host: ENV["http://flextables.de"] || "localhost:3000" }
+end
 end
