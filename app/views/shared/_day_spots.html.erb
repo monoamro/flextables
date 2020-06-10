@@ -3,7 +3,7 @@
     <% time_slot = @time_slots.find{ |ts| ts.weekly_period == spot } %>
     <% if time_slot.nil? %>
     <li class="single-event empty" data-start="<% if (1..5).include?(spot.to_i)%>9<% elsif (6..10).include?(spot.to_i) %>10<% elsif (11..15).include?(spot.to_i) %>11<% elsif (16..20).include?(spot.to_i) %>13<% end %>:00" data-end="<% if (1..5).include?(spot.to_i)%>9<% elsif (6..10).include?(spot.to_i) %>10<% elsif (11..15).include?(spot.to_i) %>11<% elsif (16..20).include?(spot.to_i) %>13<% end %>:45">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal<%= spot %>">
+        <button type="button" class="btn btn-primary add-flex" data-toggle="modal" data-target="#exampleModal<%= spot %>">
           Add Flexclass
         </button>
       </li>
