@@ -127,8 +127,8 @@ const schedule = () => {
     this.modalBody.find('.event-info').load(event.parent().attr('data-content')+'.html .event-info > *', function(data){
       //once the event content has been loaded
       self.element.addClass('content-loaded');
-      console.log(jQuery.parseHTML(data)[12]);
-      const showPartial = jQuery.parseHTML(data)[12].querySelector(".lesson-show");
+      console.log(jQuery.parseHTML(data));
+      const showPartial = jQuery.parseHTML(data)[46].querySelector(".lesson-show");
       self.element[0].children[2].children[1].children[0].appendChild(showPartial);
       attendance();
     });
