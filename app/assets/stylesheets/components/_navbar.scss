@@ -1,8 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: #4c4c4c;
-  // border: 1px solid #ced4da;
-  // border-radius: 2px;
+  background-color: #1A2E3D;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   height: 70px;
   padding: 20px;
@@ -12,9 +10,25 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-lewagon img {
   width: 70px;
-  margin: 30px;
+  margin-left: 30px;
+}
+
+.dropdown img {
+  width: 50px;
+  margin-left: 20px;
+}
+
+.navbar-lewagon p {
+  vertical-align: middle !important;
+  font-family: "Helvetica", sans-serif;
+}
+
+.navbar-text {
+    display: inline-block;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 .nav-link {
@@ -41,6 +55,7 @@
   font-weight: 400;
   line-height: 1.5;
   margin: 8px;
+  text-align: center;
 }
 
 .avatar {
