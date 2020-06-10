@@ -37,27 +37,24 @@
 .sign-up {background: #B8F2E6;}
 
 .log-in {
-    display: inline-block;
-    color: #252537;
-    font-size: 18px;
-    width: 280px;
-    height: 50px;
-    padding: 0 20px;
-    background: #fff;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.2s linear;
-    margin: 7% auto;
-    letter-spacing: 0.05em;
+  display: inline-block;
+  color: #252537;
+  font-size: 18px;
+  width: 280px;
+  height: 50px;
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+  margin: 7% auto;
+  letter-spacing: 0.05em;
 }
 .add-flex {
-  background-image: asset-url("plus.png");
-  background-repeat:no-repeat;
-  background-size: 20%;
-  background-position: center;
+  color: #00AF80;
 }
 
 /* buttons hover */
