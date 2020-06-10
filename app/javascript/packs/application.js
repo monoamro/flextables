@@ -34,12 +34,12 @@ document.addEventListener('turbolinks:load', () => {
 
 });
 
-
-
 window.addEventListener('DOMContentLoaded', (event) => {
-
-
-  schedule()
+  schedule();
 });
 
+
+
+
 import "controllers"
+
