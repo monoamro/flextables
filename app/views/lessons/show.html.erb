@@ -1,22 +1,25 @@
 <% if current_user.teacher? %>
-  <div class="container textarea lesson-show-teacher" style="background-color: #FCFEFE;">
+  <div class="container textarea lesson-show" style="background-color: #FCFEFE;">
     <h1 class="lesson-title text-center"> <%= @lesson.title %> </h1>
     <p class="lesson-details"> <%= @lesson.details %> </p>
     <h4 class="homework-title"><strong>Homework:</strong></h4>
     <p class="lesson-details"> <%= @lesson.homework %> </p>
     <% if current_user.teacher? %>
       <%= link_to "Update details and homework", edit_lesson_path(@lesson) %>
-      <%= link_to "Back to my lessons", lessons_path %>
     <% end %>
-    <ul>
-      <% timeslots = @lesson.time_slots.select { |timeslot| timeslot.weekly_period == @spot } %>
-      <% timeslots.each do |ts| %>
-        <li><%= ts.student.user.first_name %> <%= ts.student.user.last_name %></li>
-      <% end %>
-    </ul>
+    <% timeslots = @lesson.time_slots.select { |timeslot| timeslot.weekly_period == @spot } %>
+    <% unless timeslots.empty? %>
+      <div class="form-check student-list">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <% timeslots.each_with_index do |ts, index| %>
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck<%= index %> ">
+          <label class="form-check-label ml-2" for="defaultCheck<%= index %>"><%= ts.student.user.first_name %> <%= ts.student.user.last_name %></label><br>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 <% elsif current_user.student? %>
-  <div class="container textarea lesson-show-student " style="background-color: #FCFEFE;">
+  <div class="container textarea lesson-show " style="background-color: #FCFEFE;">
     <h1 class="lesson-title text-center"> <%= @lesson.title %> </h1>
     <p class="lesson-details"> <%= @lesson.details %> </p>
     <h4 class="homework-title"><strong>Homework:</strong></h4>

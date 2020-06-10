@@ -34,7 +34,11 @@ document.addEventListener('turbolinks:load', () => {
 
 });
 
+
+
 window.addEventListener('DOMContentLoaded', (event) => {
+
+
   schedule()
 });
 
