@@ -1,5 +1,5 @@
 class TimeSlotsController < ApplicationController
-
+  before_action :authenticate_user!
   def index
     @time_slots = current_user.students.first.time_slots
     @time_slot = TimeSlot.new
