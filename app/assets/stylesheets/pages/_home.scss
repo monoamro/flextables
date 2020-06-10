@@ -160,7 +160,7 @@ h3.maincontent {
 }
 
 .maincontent .rem-input {
-  position:relative;
+  position: relative;
   top:2px;
 }
 
@@ -170,7 +170,7 @@ h3.maincontent {
   margin: auto;
 
   a, p, h1, h2, h3, hr {
-  color: #4c4c4c;
+  color: #1A2E3D;
   font-family: 'Quicksand', sans-serif;
   }
 }
@@ -205,7 +205,6 @@ h3.ldp-content {
 
 .ldp-content .line-wrapper {
   padding: 100px 0 40px 0;
-  position: relative;
   z-index: 0;
   margin: 0 auto;
 }
@@ -226,7 +225,7 @@ h3.ldp-content {
 
 .schoolsystem-banner {
   background-color: #1A2E3D;
-  height: 150px;
+  height: 50px;
   min-height: -moz-fit-content;
   text-align: center;
   display: flex;
@@ -277,7 +276,7 @@ h3.ldp-content {
 }
 
 .ldp-content .line-wrapper {
-  padding: 100px 0 40px 0;
+  padding: 160px 0 80px 0;
   position: relative;
   z-index: 0;
   margin: 0 auto;
@@ -299,23 +298,24 @@ h2.hiw-lw {
 }
 
 .hiw-text {
-  color: #1A2E3D;
   font-family: 'Quicksand', sans-serif;
   line-height: 1.5;
+  margin: 10px;
+  padding: 10px;
 }
 
 h2.hiw-text {
   font-size: 20px;
-  font-weight: medium;
+  font-weight: bold;
 }
 
 p.hiw-text {
   font-size: 18px;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .hiw .line-wrapper {
-    padding: 100px 0 40px 0;
+    padding: 140px 0 80px 0;
     position: relative;
     z-index: 0;
     margin: 0 auto;
@@ -329,21 +329,29 @@ p.hiw-text {
 }
 
 .hiw-card {
-  min-height: 300px;
+  min-height: 450px;
   text-align: center;
-  max-width: 272px;
+  max-width: 350px;
+  min-width: 200px;
   border-radius: 5px;
   height: auto;
   margin: 2% auto;
-  box-shadow: 0 9px 50px rgba(234, 177, 149, 0.31);
-  background-color: snow;
-  opacity: 70%;
+  background-color: white;
 
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 0;
   word-wrap: break-word;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.hiw-card-header {
+  background-color: #1A2E3D;
+  color: white;
+}
+
+.hiw-card-info  {
+  color: #1A2E3D;
+  background-color: white;
 }
