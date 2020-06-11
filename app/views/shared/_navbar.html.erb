@@ -9,7 +9,7 @@
         <li class="nav-item dropdown">
           <% if current_user.student? %>
             <%= image_tag asset_url("jonnyboy.png"), class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <% else %>
+          <% else %>
             <%= image_tag asset_url("nima.png"), class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
