@@ -4,35 +4,28 @@
     <p class="lesson-details"> <%= @lesson.details %> </p>
     <h4 class="homework-title"><strong>Homework:</strong></h4>
     <p class="lesson-details"> <%= raw Rinku.auto_link(@lesson.homework, :all, 'target="_blank"').html_safe %> </p>
-    <%= link_to "Update details and homework", edit_lesson_path(@lesson) %>
     <% timeslots = @lesson.time_slots.select { |timeslot| timeslot.weekly_period == @spot } %>
+    <p class="student-count">Students: (<%= timeslots.length %> / <%= @lesson.capacity %>)</p>
     <% unless timeslots.empty? %>
-      <p class="student-count">Students: (<%= timeslots.length %> / <%= @lesson.capacity %>)</p>
       <div class="form-check student-list">
         <% timeslots.each_with_index do |ts, index| %>
           <p class="student-attendance" style="cursor: default;"><%= ts.student.user.first_name %> <%= ts.student.user.last_name %></p>
         <% end %>
       </div>
     <% end %>
-    <%= simple_form_for([@lesson], remote: :true) do |f| %>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div class="add-edit-form">
-              <div class="form-inputs text-center">
-                <%= f.input :details, :input_html => {:rows => 2} %> <br>
-                <%= f.input :homework, :input_html => {:rows => 6} %> <br>
-              </div>
-              <div class="center">
-                <div class="form-actions text-center">
-                  <%= f.submit "Update lesson", class: "btn submits-new sign-up mt-5 mb-5" %>
-                </div>
-              </div>
-            </div>
-          </div>
+
+    <div class="update-lesson">
+      <%= simple_form_for([@lesson], remote: :true) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :details, :input_html => {:rows => 2} %> <br>
+          <%= f.input :homework, :input_html => {:rows => 6} %> <br>
         </div>
-      </div>
-    <% end %>
+        <div class="form-actions text-center">
+          <%= f.submit "Update lesson", class: "btn submits-new sign-up" %>
+        </div>
+      <% end %>
+    </div>
+
   </div>
 <% elsif current_user.student? %>
   <div class="container textarea lesson-show" style="background-color: #FCFEFE;">
