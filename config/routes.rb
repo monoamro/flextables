@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :time_slots, only: [:index, :create, :destroy]
   get "time_slots/new/:weekly_period", to: "time_slots#new"
   # as a teacher I can see my timeable
-
+  get "/impressum", to: "pages#impressum", as: :impressum
+  get "/about", to: "pages#about", as: :about
 end
