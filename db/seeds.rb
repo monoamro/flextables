@@ -119,8 +119,7 @@ puts "Creating lessons"
 #creating mandetory classes
 
 
-math = Lesson.new(title: "Math", room: "H2", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["1", "14", "10"], details: "Pythagorean theorem, In a right angled triangle, the square of the hypotenuse is equal to
-the sum of the squares of the other two sides.", homework: "Math Workbook 9, Page 23,Exercise 2, 3, 4 and 5")
+math = Lesson.new(title: "Math", room: "H2", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["1", "14", "10"], details: "Join the class for an in-depth look at the fundamentals of mathematics including elementary multiplication, division, addition, subtraction and more. Once completed, each student will have a thorough understanding of core mathematical solutions.", homework: "Each student will be expected to complete a multiplication chart before next week, Math Workbook, Page 23, Exercise 2, 3, 4 and 5")
 
 math.grade = grade
 math.teacher = math_teacher
@@ -128,14 +127,14 @@ math.save
 
 
 
-history = Lesson.new(title: "History", room: "H1", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["11", "3"], details: "Napoleon the III (Charles-Louis Napoléon Bonaparte; 20 April 1808 – 9 January 1873)", homework: "Please read History alive, Page 112-115")
+history = Lesson.new(title: "History", room: "H1", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["11", "3"], details: "Students will be engaged in conversation, as well as lectures, about how our world became what it is today. The course will take a look at the brief history of each country, wars and essential moments throughout history that forever molded our government, freedoms and liberties.", homework: "Each student will complete a worksheet that identifies important leaders throughout history and what type of governmental power they demonstrated.")
 
 history.grade = grade
 history.teacher = history_teacher
 history.save
 
 
-german = Lesson.new(title: "German", room: "M7", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["2", "13", "5"], details: "Adjektivdeklination Typ2 Typ3, Adjektivgruppen", homework: "Deutsch als Fremdsprache 3, Seite 47, Aufgabe 1-3")
+german = Lesson.new(title: "German", room: "M7", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["2", "13", "5"], details: "Class will start to learn and understand the country's native language by conjugating verbs, learning proper use of nouns and pronouns and also learning how to pronounce each word. This class will be a beginner's course for anyone looking to take a nice vacation to Berlin by learning simple, conversational German.", homework: "Write a complete paragraph properly in passive that describes a summercamp experience.")
 
 
 german.grade = grade
@@ -144,7 +143,7 @@ german.save
 
 
 
-ethics = Lesson.new(title: "Ethics", room: "M7", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["7", "20"], details: "Anarchy and Freedom in changing times", homework: "Read and fill out task sheet of this lesson")
+ethics = Lesson.new(title: "Ethics", room: "M7", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["7", "20"], details: "This course is designed to give an inside look at the history of a person's 'moral compass' as well as religions by geographical location. Ethics helps students by learning the fundamentals of religious influence and how it affects society's legal system.", homework: "Each student will pick a period of historical conflict and demonstrate how both sides' ethics were involved in deciding resolutions.")
 
 
 ethics.grade = grade
@@ -152,7 +151,7 @@ ethics.teacher = english_teacher
 ethics.save
 
 
-english = Lesson.new(title: "English", room: "M13", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["17", "9"], details: "Irregular Past Simple", homework: "Irregular Past Simple, Part 2, Execsise 1, 2 and 3")
+english = Lesson.new(title: "English", room: "M13", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["17", "9"], details: "Dive back into the basics of the English language by learning compound words, the difference between adjectives and adverbs, verb conjugation and proper sentence structure. After completing this class, students will be able to proof-read any assignment without assistance from the instructor.", homework: "Each student will be given a short story with 25 grammatical errors. Students must identify each error and properly state how to correct it.")
 
 
 english.grade = grade
@@ -164,14 +163,14 @@ puts "All Mandetory lessons created"
 
 
 
-sports = Lesson.new(title: "Sports", room: "G1", capacity: 12, lesson_type: "Flex", weekly_periods: ["6", "12", "18", "4", "15"], details: "Soccer, Volleyball", homework: "PE_Theoretics: Muscles of the Back")
+sports = Lesson.new(title: "Sports", room: "G1", capacity: 12, lesson_type: "Flex", weekly_periods: ["6", "12", "18", "4", "15"], details: "This course is a very detailed account of all rules and regulations involving popular sports from around the world! The class will also take a look at important historical players from each sport that helped catapult the sport into mainstream society and pop culture.", homework: "Each student will write an essay describing the difference between American soccer and American football.")
 
 sports.grade = grade
 sports.teacher = history_teacher
 sports.save
 
 
-painting = Lesson.new(title: "Painting", room: "A1", capacity: 10, lesson_type: "Flex", weekly_periods: ["6", "16", "8", "4", "19"], details: "Impressionism", homework: "Paint the view from your window at home in an impressionistic style")
+painting = Lesson.new(title: "Art", room: "A1", capacity: 10, lesson_type: "Flex", weekly_periods: ["6", "16", "8", "4", "19"], details: "Art: This course takes a look into the different eras of Art throughout history, important artists from each era and basic understanding of techniques used by each artist. After completion of the course, students will be expected to identify paintings by their date based on details from each painting.", homework: "Students will pick an artist and recreate an important work of theirs in an updated format such as webpages, videos, internet graphics, etc.")
 
 
 painting.grade = grade
@@ -180,7 +179,7 @@ painting.save
 
 
 
-it = Lesson.new(title: "IT", room: "C1", capacity: 13, lesson_type: "Flex", weekly_periods: ["16", "12", "18", "19", "15"], details: "Introduction to Layers in a Network and Routing", homework: "IT-today, Page 33 and 34")
+it = Lesson.new(title: "IT", room: "C1", capacity: 13, lesson_type: "Flex", weekly_periods: ["16", "12", "18", "19", "15"], details: "This course highlights the technology behind 'information technology' or 'IT.'' Students will become familiar with networking, hardware and software and solutions for technical difficulties. The course is designed for those with special interests in Computer Science.", homework: "Each student must write a short essay on the difference between storage and memory. They will be expected to be able to explain this using everyday terms.")
 
 
 it.grade = grade
@@ -189,7 +188,7 @@ it.save
 
 
 
-biology = Lesson.new(title: "Biology", room: "M7", capacity: 10, lesson_type: "Flex", weekly_periods: ["6", "12", "4", "15"], details: "Frog´s anatomy", homework: "Read pages 168 to 171, then excersises 1 and 2 on page 171")
+biology = Lesson.new(title: "Biology", room: "M7", capacity: 10, lesson_type: "Flex", weekly_periods: ["6", "12", "4", "15"], details: "Biology: Students will 'come alive' with the study of life! This course takes a microscopic look at all forms of life from a cellular level. Students will be able to properly identify parts of a cell, explain the difference between DNA and RNA and be able to understand how an ecosystem works.", homework: "Each student must explain to the instructor the difference between mitosis and meiosis and identify the different stages of each.")
 
 
 biology.grade = grade
@@ -198,7 +197,7 @@ biology.save
 
 
 
-apcalc = Lesson.new(title: "AP-Calc.", room: "M13", capacity: 10, lesson_type: "Flex", weekly_periods: ["16", "8", "18", "19"], details: "Calculus of variations", homework: "Excersises 35-37 in the book")
+apcalc = Lesson.new(title: "AP-Calc.", room: "M13", capacity: 10, lesson_type: "Flex", weekly_periods: ["16", "8", "18", "19"], details: "Students will be given an exciting look into the world of functions and patterns in numerical values. Students will be educated on how to identify these functions and how to quickly apply these in other courses such as physics, engineering, etc.", homework: "Within the first week, each student will write a short essay on the similarities and differences between integral calculus and differential calculus.")
 
 apcalc.grade = grade
 apcalc.teacher = biology_teacher
