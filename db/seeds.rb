@@ -65,7 +65,7 @@ student_users = [student_user, student_user_2, student_user_3, student_user_4, s
 
 
 #Mandetory teachers users
-math_teacher_user = User.create(email: "mathteacher@flextables.de", password: 123456, first_name: "Malben", last_name: "Franco")
+math_teacher_user = User.create(email: "mathteacher@flextables.de", password: 123456, first_name: "Nima", last_name: "Hassanabadi")
 history_teacher_user = User.create(email: "historyteacher@flextables.de", password: 123456, first_name: "Jeremy", last_name: "Crane")
 english_teacher_user = User.create(email: "englishteacher@flextables.de", password: 123456, first_name: "Jousef", last_name: "Rahbani")
 
@@ -119,7 +119,7 @@ puts "Creating lessons"
 #creating mandetory classes
 
 
-math = Lesson.new(title: "Math", room: "H2", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["1", "14", "10"], details: "Join the class for an in-depth look at the fundamentals of mathematics including elementary multiplication, division, addition, subtraction and more. Once completed, each student will have a thorough understanding of core mathematical solutions.", homework: "Each student will be expected to complete a multiplication chart before next week, Math Workbook, Page 23, Exercise 2, 3, 4 and 5")
+math = Lesson.new(title: "Math", room: "H2", capacity: 30, lesson_type: "Mandetory", weekly_periods: ["1", "14", "10"], details: "Join the class for an in-depth look at the fundamentals of mathematics including elementary multiplication, division, addition, subtraction and more. Once completed, each student will have a thorough understanding of core mathematical solutions.", homework: "Each student will be expected to complete a multiplication chart before next week, Math Workbook, Page 23, Exercise 2, 3, 4 and 5")
 
 math.grade = grade
 math.teacher = math_teacher
@@ -127,14 +127,14 @@ math.save
 
 
 
-history = Lesson.new(title: "History", room: "H1", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["11", "3"], details: "Students will be engaged in conversation, as well as lectures, about how our world became what it is today. The course will take a look at the brief history of each country, wars and essential moments throughout history that forever molded our government, freedoms and liberties.", homework: "Each student will complete a worksheet that identifies important leaders throughout history and what type of governmental power they demonstrated.")
+history = Lesson.new(title: "History", room: "H1", capacity: 30, lesson_type: "Mandetory", weekly_periods: ["11", "3"], details: "Students will be engaged in conversation, as well as lectures, about how our world became what it is today. The course will take a look at the brief history of each country, wars and essential moments throughout history that forever molded our government, freedoms and liberties.", homework: "Each student will complete a worksheet that identifies important leaders throughout history and what type of governmental power they demonstrated.")
 
 history.grade = grade
 history.teacher = history_teacher
 history.save
 
 
-german = Lesson.new(title: "German", room: "M7", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["2", "13", "5"], details: "Class will start to learn and understand the country's native language by conjugating verbs, learning proper use of nouns and pronouns and also learning how to pronounce each word. This class will be a beginner's course for anyone looking to take a nice vacation to Berlin by learning simple, conversational German.", homework: "Write a complete paragraph properly in passive that describes a summercamp experience.")
+german = Lesson.new(title: "German", room: "M7", capacity: 30, lesson_type: "Mandetory", weekly_periods: ["2", "13", "5"], details: "Class will start to learn and understand the country's native language by conjugating verbs, learning proper use of nouns and pronouns and also learning how to pronounce each word. This class will be a beginner's course for anyone looking to take a nice vacation to Berlin by learning simple, conversational German.", homework: "Write a complete paragraph properly in passive that describes a summercamp experience.")
 
 
 german.grade = grade
@@ -143,7 +143,7 @@ german.save
 
 
 
-ethics = Lesson.new(title: "Ethics", room: "M7", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["7", "20"], details: "This course is designed to give an inside look at the history of a person's 'moral compass' as well as religions by geographical location. Ethics helps students by learning the fundamentals of religious influence and how it affects society's legal system.", homework: "Each student will pick a period of historical conflict and demonstrate how both sides' ethics were involved in deciding resolutions.")
+ethics = Lesson.new(title: "Ethics", room: "M7", capacity: 30, lesson_type: "Mandetory", weekly_periods: ["7", "20"], details: "This course is designed to give an inside look at the history of a person's 'moral compass' as well as religions by geographical location. Ethics helps students by learning the fundamentals of religious influence and how it affects society's legal system.", homework: "Each student will pick a period of historical conflict and demonstrate how both sides' ethics were involved in deciding resolutions.")
 
 
 ethics.grade = grade
@@ -151,7 +151,7 @@ ethics.teacher = english_teacher
 ethics.save
 
 
-english = Lesson.new(title: "English", room: "M13", capacity: 20, lesson_type: "Mandetory", weekly_periods: ["17", "9"], details: "Dive back into the basics of the English language by learning compound words, the difference between adjectives and adverbs, verb conjugation and proper sentence structure. After completing this class, students will be able to proof-read any assignment without assistance from the instructor.", homework: "Each student will be given a short story with 25 grammatical errors. Students must identify each error and properly state how to correct it.")
+english = Lesson.new(title: "English", room: "M13", capacity: 30, lesson_type: "Mandetory", weekly_periods: ["17", "9"], details: "Dive back into the basics of the English language by learning compound words, the difference between adjectives and adverbs, verb conjugation and proper sentence structure. After completing this class, students will be able to proof-read any assignment without assistance from the instructor.", homework: "Each student will be given a short story with 25 grammatical errors. Students must identify each error and properly state how to correct it.")
 
 
 english.grade = grade
