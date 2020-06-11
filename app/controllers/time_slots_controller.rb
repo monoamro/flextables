@@ -1,12 +1,11 @@
 class TimeSlotsController < ApplicationController
   before_action :authenticate_user!
   def index
-    @time_slots = current_user.students.first.time_slots
-    @time_slot = TimeSlot.new
     if current_user.teacher?
-      # instance variables for teacher
-      # here would go something like @student = Student.find(params[:student_id])
+      redirect_to lessons_path
     else
+      @time_slots = current_user.students.first.time_slots
+      @time_slot = TimeSlot.new
       @time_slots = current_user.students.first.time_slots
       @monday_spots    = %w(1 6 11 16)
       @tuesday_spots   = %w(2 7 12 17)
