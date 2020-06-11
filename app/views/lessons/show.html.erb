@@ -9,6 +9,7 @@
     <% end %>
     <% timeslots = @lesson.time_slots.select { |timeslot| timeslot.weekly_period == @spot } %>
     <% unless timeslots.empty? %>
+      <p class="student-count">Students: (<%= timeslots.length %> / <%= @lesson.capacity %>)</p>
       <div class="form-check student-list">
         <% timeslots.each_with_index do |ts, index| %>
           <p class="student-attendance" style="cursor: default;"><%= ts.student.user.first_name %> <%= ts.student.user.last_name %></p>

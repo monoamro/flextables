@@ -5,7 +5,7 @@
       <% else %>
         <li class="single-event" data-start="<% if (1..5).include?(spot.to_i)%>9<% elsif (6..10).include?(spot.to_i) %>10<% elsif (11..15).include?(spot.to_i) %>11<% elsif (16..20).include?(spot.to_i) %>13<% end %>:00" data-end="<% if (1..5).include?(spot.to_i)%>9<% elsif (6..10).include?(spot.to_i) %>10<% elsif (11..15).include?(spot.to_i) %>11<% elsif (16..20).include?(spot.to_i) %>13<% end %>:45" data-content="/lessons/<%= current_lesson[0].id %>?spot=<%= spot %>" data-event="event-<%= current_lesson[0].id %>">
           <a href="#0">
-            <em class="event-name"><%= current_lesson[0].title %></em>
+            <em class="event-name"><%= current_lesson[0].title %> (<%= current_lesson[0].room %>)</em>
           </a>
         </li>
       <% end %>
