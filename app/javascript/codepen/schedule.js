@@ -1,4 +1,6 @@
 import attendance from '../packs/attendance.js'
+import editLesson from '../packs/editLesson.js'
+
 
 const schedule = () => {
   jQuery(document).ready(function($){
@@ -131,6 +133,7 @@ const schedule = () => {
       const showPartial = jQuery.parseHTML(data)[12].querySelector(".lesson-show");
       self.element[0].children[2].children[1].children[0].appendChild(showPartial);
       attendance();
+      editLesson();
     });
 
     this.element.addClass('modal-is-open');
