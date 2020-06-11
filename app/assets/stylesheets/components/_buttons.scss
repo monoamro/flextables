@@ -2,23 +2,23 @@
   /* buttons  */
 
  // add lesson button
- .submits-new {
-    width: 33%;
-    display: inline-block;
-    float: center;
-    border-radius: 4px;
-    font-size: 85%;
+ // .submits-new {
+ //    width: 33%;
+ //    display: inline-block;
+ //    float: center;
+ //    border-radius: 4px;
+ //    font-size: 85%;
     // margin-left: 2%;
 
-  .submits-new:hover {
-    border: solid;
-  }
- }
+ //  .submits-new:hover {
+ //    border: solid;
+ //  }
+ // }
 
 .submits {
     width: 48%;
     display: inline-block;
-    float: left;
+    float: center;
     margin-left: 2%;
 }
 
@@ -34,7 +34,7 @@
 }
 
 
-.sign-up {background: #B8F2E6;}
+.sign-up {background: #a1a1c7;}
 
 .log-in {
     display: inline-block;
