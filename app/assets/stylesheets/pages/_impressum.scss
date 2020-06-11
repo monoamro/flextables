@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet');
+
+#impressum {
+  min-height: 100vh;
+  margin: auto;
+}
+
+.imp-banner {
+  background-color: #1A2E3D;
+  height: 50px;
+}
+
+h1.imp-banner {
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.2;
+  color: white;
+  font-size: 30px;
+}
+
+.imp-text {
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.2;
+}
+
+p.imp-text {
+  color: #1A2E3D;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+h2.imp-text {
+    color: #1A2E3D;
+    line-height: 1.2;
+    font-size: 24px;
+    font-weight: medium;
+  }
