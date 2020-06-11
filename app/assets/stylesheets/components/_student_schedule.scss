@@ -384,6 +384,11 @@ Main Components
   background: #CDD6D0;
 }
 
+.cd-schedule .single-event[data-event="event-10"],
+.cd-schedule [data-event="event-10"] .header-bg {
+  background: #00AF80;
+}
+
 .cd-schedule .event-modal {
   position: fixed;
   z-index: 3;
