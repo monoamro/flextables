@@ -38,7 +38,7 @@
     <% else %>
       <li class="single-event" data-start="<%= time_slot.start_time %>:00" data-end="<%= time_slot.start_time %>:45" data-content="/lessons/<%= time_slot.lesson.id %>" data-event="event-<%= time_slot.lesson.id  %>">
         <a href="#0">
-          <em class="event-name"><%= time_slot.lesson.title %> <span class="teacher-name">(Mr. <%= time_slot.lesson.teacher.user.last_name %> )</span> </em>
+          <em class="event-name"><%= time_slot.lesson.title %> <span class="teacher-name">(<%= time_slot.lesson.teacher.user.last_name %> )</span> </em>
         </a>
       </li>
     <% end %>
