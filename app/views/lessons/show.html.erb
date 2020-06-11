@@ -3,7 +3,7 @@
     <h1 class="lesson-title text-center"> <%= @lesson.title %> </h1>
     <p class="lesson-details"> <%= @lesson.details %> </p>
     <h4 class="homework-title"><strong>Homework:</strong></h4>
-    <p class="lesson-details"> <%= raw Rinku.auto_link(@lesson.homework) %> </p>
+    <p class="lesson-details"> <%= raw Rinku.auto_link(@lesson.homework, :all, 'target="_blank"').html_safe %> </p>
     <%= link_to "Update details and homework", edit_lesson_path(@lesson) %>
     <% timeslots = @lesson.time_slots.select { |timeslot| timeslot.weekly_period == @spot } %>
     <% unless timeslots.empty? %>
@@ -39,7 +39,7 @@
     <h1 class="lesson-title text-center"> <%= @lesson.title %> </h1>
     <p class="lesson-details"> <%= @lesson.details %> </p>
     <h4 class="homework-title"><strong>Homework:</strong></h4>
-    <p class="lesson-details"> <%= raw Rinku.auto_link(@lesson.homework) %> </p>
+    <p class="lesson-details"> <%= raw Rinku.auto_link(@lesson.homework, :all, 'target="_blank"').html_safe %> </p>
   </div>
 <% end %>
 
