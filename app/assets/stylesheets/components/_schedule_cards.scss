@@ -11,6 +11,24 @@
     color:black;
   }
 
+  .container-edit-attendance {
+    padding-top: 10px;
+    padding-top: 10px;
+  }
+
+  .edit-details-homework{
+    color: black;
+    &:hover{
+      border-bottom: 2px black solid;
+    }
+  }
+  .show-attendance{
+    color: black;
+    &:hover{
+      border-bottom: 2px black solid;
+    }
+  }
+
   .lesson-details {
     margin-top: 10px;
   }
@@ -61,4 +79,8 @@
 }
 .attendance_hidden{
   display: none;
+}
+
+.update-lesson{
+  padding-top: 10px;
 }
