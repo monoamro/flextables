@@ -1,6 +1,7 @@
 import attendance from '../packs/attendance.js'
 import editLesson from '../packs/editLesson.js'
-
+import toggleEditForm from '../packs/toggleEditForm.js'
+import toggleAttendance from '../packs/toggleAttendance.js'
 
 const schedule = () => {
   jQuery(document).ready(function($){
@@ -134,6 +135,8 @@ const schedule = () => {
       self.element[0].children[2].children[1].children[0].appendChild(showPartial);
       attendance();
       editLesson();
+      toggleEditForm();
+      toggleAttendance();
     });
 
     this.element.addClass('modal-is-open');

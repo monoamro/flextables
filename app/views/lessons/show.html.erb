@@ -4,18 +4,18 @@
     <p class="lesson-details"> <%= @lesson.details %> </p>
     <h4 class="homework-title"><strong>Homework:</strong></h4>
     <p class="lesson-details"> <%= raw Rinku.auto_link(@lesson.homework) %> </p>
-    <%= link_to "Update details and homework", edit_lesson_path(@lesson) %>
+    <p><a class="edit-details-homework">Update details & homework</a> || <a class="show-attendance">Attendance</a></p>
     <% timeslots = @lesson.time_slots.select { |timeslot| timeslot.weekly_period == @spot } %>
     <% unless timeslots.empty? %>
       <p class="student-count">Students: (<%= timeslots.length %> / <%= @lesson.capacity %>)</p>
-      <div class="form-check student-list">
+      <div class="form-check student-list attendance_hidden">
         <% timeslots.each_with_index do |ts, index| %>
           <p class="student-attendance" style="cursor: default;"><%= ts.student.user.first_name %> <%= ts.student.user.last_name %></p>
         <% end %>
       </div>
     <% end %>
     <%= simple_form_for([@lesson], remote: :true) do |f| %>
-      <div class="container">
+      <div class="container edit_form_hidden">
         <div class="row justify-content-center">
           <div class="col-md-6">
             <div class="add-edit-form">
