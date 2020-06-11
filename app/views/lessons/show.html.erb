@@ -3,18 +3,18 @@
     <h1 class="lesson-title text-center"> <%= @lesson.title %> </h1>
     <p class="lesson-details"> <%= @lesson.details %> </p>
     <h4 class="homework-title"><strong>Homework:</strong></h4>
+    <p><a class="edit-details-homework">Update details & homework</a> | <a class="show-attendance">Attendance</a></p>
     <p class="lesson-details"> <%= raw Rinku.auto_link(@lesson.homework, :all, 'target="_blank"').html_safe %> </p>
     <% timeslots = @lesson.time_slots.select { |timeslot| timeslot.weekly_period == @spot } %>
     <p class="student-count">Students: (<%= timeslots.length %> / <%= @lesson.capacity %>)</p>
     <% unless timeslots.empty? %>
-      <div class="form-check student-list">
+      <div class="form-check student-list attendance_hidden">
         <% timeslots.each_with_index do |ts, index| %>
           <p class="student-attendance" style="cursor: default;"><%= ts.student.user.first_name %> <%= ts.student.user.last_name %></p>
         <% end %>
       </div>
     <% end %>
-
-    <div class="update-lesson">
+    <div class="update-lesson edit_form_hidden">
       <%= simple_form_for([@lesson], remote: :true) do |f| %>
         <div class="form-inputs">
           <%= f.input :details, :input_html => {:rows => 2} %> <br>
@@ -25,7 +25,6 @@
         </div>
       <% end %>
     </div>
-
   </div>
 <% elsif current_user.student? %>
   <div class="container textarea lesson-show" style="background-color: #FCFEFE;">
