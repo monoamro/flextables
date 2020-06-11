@@ -65,12 +65,12 @@ student_users = [student_user, student_user_2, student_user_3, student_user_4, s
 
 
 #Mandetory teachers users
-math_teacher_user = User.create(email: "mathteacher@flextables.de", password: 123456, first_name: "Nima", last_name: "Hassanabadi")
-history_teacher_user = User.create(email: "historyteacher@flextables.de", password: 123456, first_name: "Jeremy", last_name: "Crane")
-english_teacher_user = User.create(email: "englishteacher@flextables.de", password: 123456, first_name: "Jousef", last_name: "Rahbani")
+math_teacher_user = User.create(email: "mathteacher@flextables.de", password: 123456, first_name: "Nima", last_name: "Mr. Hassanabadi")
+history_teacher_user = User.create(email: "historyteacher@flextables.de", password: 123456, first_name: "Sofia", last_name: "Ms. Crane")
+english_teacher_user = User.create(email: "englishteacher@flextables.de", password: 123456, first_name: "Jousef", last_name: "Mr. Rahbani")
 
 #Flex teachers users
-biology_teacher_user = User.create(email: "biologyteacher@flextables.de", password: 123456, first_name: "Stefan", last_name: "Zelt")
+biology_teacher_user = User.create(email: "biologyteacher@flextables.de", password: 123456, first_name: "Sara", last_name: "Mrs. Zelt")
 
 #creating students
 
