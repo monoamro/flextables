@@ -22,7 +22,6 @@ class LessonsController < ApplicationController
   def update
     @lesson = Lesson.find(params[:id])
     @lesson.update(lesson_params)
-    redirect_to lesson_path(@lesson)
   end
 
   private
